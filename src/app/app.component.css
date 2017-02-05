@@ -26,6 +26,19 @@ img{
 .l2{
   justify-content: space-around;
 }
+.action-select{
+  background-color: #d7c9aa;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  height: 29px;
+  padding: 5px;
+  width: 150px;
+  /*background-image: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;*/
+ /* height: 29px;*/
+  overflow: hidden;
+  /*width: 240px;*/
+}
 .search{
   display: flex;
   flex-flow: column wrap;
@@ -38,5 +51,31 @@ img{
   font-family: Calibri;
   font-size: 4vh;
   color : #d7c9aa;
+  /* padding:40px 20px ;*/
 
+}
+#search {
+
+}
+
+#search input[type="text"] {
+  width: 500px;
+  box-sizing: border-box;
+  border: 2px solid #d7c9aa;
+  font-size: 14px;
+  font:bold 14px Arial,Helvetica,sans-serif;
+  color: #0b7a75;
+  border-radius: 20px ;
+  background-color: #d7c9aa;
+  background-image: url("search.png");
+  background-position: 10px 7px;
+  float:left;
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+#search input[type="text"]:focus {
+  width: 600px;
 }

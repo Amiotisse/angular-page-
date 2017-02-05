@@ -2,24 +2,29 @@
   <div class="app hero">
     <img class="app img" src="brand.png"/>
   </div>
-  <!--div class="app action-group l1">
+  <div class="app action-group l1">
     <div class="app action-group l2">
       <div class="app action-call">
         Vous êtes
       </div>
-      <input type="" >
+      <span>  </span>
+      <select class="app action-select ">
+        <option value="teacher">Enseignant</option>
+        <option value="student">Etudiant</option>
+      </select>
     </div>
     <div class="app action-group l2">
 
     </div>
-  </div-->
+  </div>
   <div class="app search">
       <div class="app search-call">
-        <i>Trouver ce que vous cherchez, taper un code !</i>
+        <i>Trouver ce que vous cherchez, taper un code !</i><br><br>
       </div>
     <div class="app search-bar">
-      <!-- TODO search-bar -->
-      <input type="search"/>
+            <form method="get" action="/search" id="search">
+              <input class="s" name="q" type="text" size="40" placeholder="Recherche..." />
+             </form>
     </div>
   </div>
 </div>
