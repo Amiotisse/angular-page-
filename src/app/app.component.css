@@ -26,18 +26,30 @@ img{
 .l2{
   justify-content: space-around;
 }
-.action-select{
+.action-select {
   background-color: #d7c9aa;
   border: none;
   border-radius: 20px;
   font-size: 14px;
-  height: 29px;
+  height: 32px;
+  color: #7b2d26;
   padding: 5px;
-  width: 150px;
-  /*background-image: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;*/
- /* height: 29px;*/
-  overflow: hidden;
+  width: 135px;
+  scrollbar-arrow: transparent;
+   overflow: hidden;
+
   /*width: 240px;*/
+}
+.action-select select {
+  width: 130px;
+  height: 31px;
+  overflow: hidden;
+  background-image: url("assets/angle-arrow-down.png");
+  background-repeat: no-repeat ;
+  float:right;
+  background-color: #d7c9aa;
+  background-position: 98% 39%;
+  border: 2px solid #d7c9aa;
 }
 .search{
   display: flex;
