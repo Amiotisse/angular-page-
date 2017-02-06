@@ -21,10 +21,18 @@ img{
 }
 
 .l1{
+  width: 50vw ;
   justify-content: space-between;
 }
 .l2{
+
   justify-content: space-around;
+}
+.choice{
+  width: 20vw ;
+}
+.action{
+  width: 21vw;
 }
 .action-select {
   background-color: #d7c9aa;
@@ -58,7 +66,12 @@ img{
   justify-content: flex-end;
   align-items: center;
 }
-
+.action-call{
+  text-align: left;
+  font-family: Calibri;
+  font-size: 4vh;
+  color : #f0f3f5;
+}
 .search-call{
   text-align: center;
   font-family: Calibri;
@@ -91,4 +104,25 @@ img{
 
 #search input[type="text"]:focus {
   width: 600px;
+}
+.btn{
+ /* background-color: #0b7a75;*/
+ /* border : none;*/
+  border-radius: 20px ;
+  padding: 5px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px ;
+  width: 123px;
+ }
+.login{
+    background-color: #0b7a75;
+    border : none;
+    color: #f0f3f5;
+  }
+.singup{
+  background-color: #f0f3f5;
+  border : none;
+  color: #7b2d26;
 }
