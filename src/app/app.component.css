@@ -74,25 +74,25 @@ img{
 }
 
 #search input[type="text"] {
-  width: 500px;
+  width: 40vw;
   box-sizing: border-box;
-  border: 2px solid #d7c9aa;
-  font-size: 14px;
-  font:bold 14px Arial,Helvetica,sans-serif;
+  border: 0.02vw solid #d7c9aa;
+  font-size: 2.3vh;
+  font:bold 2.3vh Arial,Helvetica,sans-serif;
   color: #0b7a75;
-  border-radius: 20px ;
+  border-radius: 2vw ;
   background-color: #d7c9aa;
   background-image: url("../assets/search.png");
-  background-position: 10px 7px;
+  background-position: 0.4vh 0.1vh;
   float:left;
   background-repeat: no-repeat;
-  padding: 10px 10px 10px 40px;
+  padding: 1vh 1vh 1vh 4vh;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
 
 #search input[type="text"]:focus {
-  width: 600px;
+  width: 50vw;
 }
 .btn{
   border-radius: 2vw ;
