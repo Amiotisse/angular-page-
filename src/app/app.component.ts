@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
-  public onLogin(){
-  console.log("Rahi takhdem")
+  constructor(){
   }
+  public login(){
+    console.log("login");
+  }
+
 }
