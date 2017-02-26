@@ -1,0 +1,33 @@
+<div class="home content">
+  <div class="home hero">
+    <img class="home img" src="assets/brand.png"/>
+  </div>
+  <div class="home action-group l1">
+    <div class="home action-group l2 choice">
+      <div class="home action-call">
+        Vous êtes :
+      </div>
+      <span>  </span>
+      <div >
+        <select class="home action-select ">
+          <option value="teacher" align="center">Enseignant</option>
+          <option value="student" align="center">Etudiant</option>
+        </select>
+      </div>
+    </div>
+    <div class="home action-group l2 action">
+      <button class="btn login" [routerLink]="['/login']"><span>Se connecter</span></button>
+      <button class="btn singup"><span>S'inscrire</span></button>
+    </div>
+  </div>
+  <div class="home search">
+    <div class="home search-call">
+      <i>Trouver ce que vous cherchez, taper un code !</i><br><br>
+    </div>
+    <div class="home search-bar">
+      <form method="get" action="/search" id="search">
+        <input class="s" name="q" type="text" size="40" placeholder="Recherche..." />
+      </form>
+    </div>
+  </div>
+</div>

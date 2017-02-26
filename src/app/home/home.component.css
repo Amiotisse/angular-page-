@@ -57,13 +57,13 @@ img{
 }
 .action-call{
   text-align: left;
-  font-family: Calibri;
+  font-family: Calibri, fantasy;
   font-size: 4vh;
   color : #f0f3f5;
 }
 .search-call{
   text-align: center;
-  font-family: Calibri;
+  font-family: Calibri, fantasy;
   font-size: 4vh;
   color : #d7c9aa;
   /* padding:40px 20px ;*/
@@ -77,15 +77,11 @@ img{
   width: 40vw;
   box-sizing: border-box;
   border: 0.02vw solid #d7c9aa;
-  font-size: 2.3vh;
   font:bold 2.3vh Arial,Helvetica,sans-serif;
   color: #0b7a75;
   border-radius: 2vw ;
-  background-color: #d7c9aa;
-  background-image: url("../assets/search.png");
-  background-position: 0.4vw 0.1vw;
   float:left;
-  background-repeat: no-repeat;
+  background: #d7c9aa url("../assets/search.png") no-repeat 0.4vw 0.1vw;
   padding: 1vh 1vh 1vh 4vh;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
@@ -104,11 +100,11 @@ img{
   height: 5vh;
   width: 10vw;
   border : none;
- }
+}
 .login{
-    background-color: #0b7a75;
-    color: #f0f3f5;
-  }
+  background-color: #0b7a75;
+  color: #f0f3f5;
+}
 .singup{
   background-color: #f0f3f5;
   color: #7b2d26;
