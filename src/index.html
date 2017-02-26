@@ -7,6 +7,28 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body{
+      height: 98vh;
+      background-color: #f0f3f5;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .loading{
+      -webkit-animation:spin 1.5s linear infinite;
+      -moz-animation:spin 1.5s linear infinite;
+      animation:spin 1.5s linear infinite;}
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 <body>
   <app-root><img class="loading" src="assets/load.svg" width="50vh" height="auto"/> </app-root>
