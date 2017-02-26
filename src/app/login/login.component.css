@@ -4,3 +4,119 @@
   justify-content: center;
   align-items: center;
 }
+.content{
+  background-color: #19535f;
+  height: 60vh;
+  width: 25vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0f3f5;
+  font-size: 5vh ;
+  width: auto;
+  height: 10vh;
+  text-align: center;
+}
+.form{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 22vh;
+}
+.holder{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 15vw;
+  height: 5vh;
+}
+.role-call{
+  color: #f0f3f5;
+  font-size: 2.5vh ;
+  width: 5.2vw;
+  height: 8vh;
+}
+.role-select{
+  text-align: center;
+  font-family: Calibri, fantasy;
+  font-size: 2.5vh;
+  background-color: #d7c9aa;
+  border-radius: 1vh;
+  color : #7b2d26;
+  width: 9vw;
+  height: 5vh;
+}
+.input {
+  text-align: left;
+  font-size: 2.5vh;
+  font-family: Calibri, monospace;
+  background-color: #d7c9aa;
+  border-radius: 1vh;
+  color: #7b2d26;
+  border: none;
+}
+::-webkit-input-placeholder {  color:#7b2d26 ;
+}
+.line{
+  width: 15vw;
+  height: 5vh;
+  padding: 0.5vh;
+  padding-left: 1vw;
+}
+.btn{
+  border-radius: 2vw ;
+  padding-left: 1.2vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3vh ;
+  height: 5vh;
+  width: 10vw;
+  border : none;
+  background-color: #0b7a75;
+  color: #f0f3f5;
+}
+.inputs{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+}
+.footer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 23vw;
+}
+.pwd-forgotten{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.footer-text{
+  color: #d7c9aa;
+  font-family: Calibri,monospace;
+  font-size: 2.1vh;
+}
+.signup-call{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: baseline;
+
+}
+.singup-action{
+  color: #f0f3f5;
+  padding-left: 0.2vw;
+}

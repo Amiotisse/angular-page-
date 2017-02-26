@@ -1,6 +1,44 @@
-<div class="working">
 
-  <img src="assets/dev.svg" width="200vh" height="auto"/>
-<p> We are working on this </p>
- <p>Ganbarimassuuu >___< </p>
+<div class="login content">
+  <div class="login title text-font-family">
+    <div>Se Connecter</div>
+  </div>
+  <div class="login inputs">
+
+    <div class="login form">
+
+      <div class=" login holder ">
+       <span class=" login role-call text-font-family"> Vous êtes : </span>
+        <select class="login input role-select ">
+          <option value="teacher" align="center">Enseignant</option>
+          <option value="student" align="center">Etudiant</option>
+        </select>
+      </div>
+      <div class=" login holder">
+      <input class="login input line mail " type="email" placeholder="Email"/>
+       </div>
+      <div class="login holder">
+      <input class="login input line mdp " type="password" placeholder="Mot de passe"/>
+      </div>
+
+    </div>
+    <div >
+      <button class="login btn text-font-family" ><span>Se connecter</span></button>
+
+    </div>
+  </div>
+
+  <div class="login footer">
+    <div class="login pwd-forgotten">
+      <a class="login footer-text" [routerLink]="['/signup']"> Mot de passe oublié ? </a>
+
+    </div>
+    <div class="login signup-call ">
+      <span class="login footer-text"> Pas encore inscris ? </span>
+
+      <a class="login footer-text singup-action" [routerLink]="['/signup']"> <b>S'inscrire</b></a>
+    </div>
+
+  </div>
+
 </div>
