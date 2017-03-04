@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-.text-font-family{
-  font-family: Calibri,monospace;
 
+@font-face {
+  font-family: myFont;
+  src: url("assets/Calibri.ttf");
 }
 
