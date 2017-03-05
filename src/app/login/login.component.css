@@ -35,29 +35,28 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: baseline;
-  width: 15vw;
+  width: 20vw;
   height: 5vh;
 }
 .role-call{
   color: #f0f3f5;
   font-size: 2.5vh ;
-  width: 5.2vw;
+  width: 6vw;
   height: 8vh;
 }
 .role-select{
   text-align: center;
-  font-family: myFont;
+
   font-size: 2.5vh;
   background-color: #d7c9aa;
   border-radius: 1vh;
   color : #7b2d26;
-  width: 9vw;
+  width: 13vw;
   height: 5vh;
 }
 .input {
   text-align: left;
   font-size: 2.5vh;
-  font-family: myFont;
   background-color: #d7c9aa;
   border-radius: 1vh;
   color: #7b2d26;
@@ -66,7 +65,7 @@
 ::-webkit-input-placeholder {  color:#7b2d26 ;
 }
 .line{
-  width: 15vw;
+  width: 20vw;
   height: 5vh;
   padding: 0.5vh;
   padding-left: 1vw;
@@ -106,7 +105,7 @@
 }
 .footer-text{
   color: #d7c9aa;
-  font-family: myFont;
+
   font-size: 2.1vh;
 }
 .signup-call{

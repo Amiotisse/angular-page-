@@ -57,13 +57,11 @@ img{
 }
 .action-call{
   text-align: left;
-  font-family: myFont;
   font-size: 4vh;
   color : #f0f3f5;
 }
 .search-call{
   text-align: center;
-  font-family: myFont;
   font-size: 4vh;
   color : #d7c9aa;
   /* padding:40px 20px ;*/

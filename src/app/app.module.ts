@@ -8,13 +8,15 @@ import { LoginComponent } from './login/login.component';
 import {routes} from "./app.route";
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
+import { NotImplYetComponent } from './not-impl-yet/not-impl-yet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    SignupComponent
+    SignupComponent,
+    NotImplYetComponent
   ],
   imports: [
     BrowserModule,
