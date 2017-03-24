@@ -8,9 +8,8 @@
     <div class="login form">
       <div class=" login holder ">
        <span class=" login role-call "> Vous êtes : </span>
-        <select class="login input role-select ">
-          <option value="teacher" align="center">Enseignant</option>
-          <option value="student" align="center">Etudiant</option>
+        <select [(ngModel)]="userRoleService.user_roles_selected" class="login input role-select ">
+          <option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role" align="center">{{user_role.display}}</option>
         </select>
       </div>
       <div class=" login holder">

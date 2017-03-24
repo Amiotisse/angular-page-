@@ -9,9 +9,10 @@
       </div>
       <span>  </span>
       <div >
-        <select class="home action-select ">
-          <option value="teacher" align="center">Enseignant</option>
-          <option value="student" align="center">Etudiant</option>
+        <select [(ngModel)]="userRoleService.user_roles_selected"  class="home action-select ">
+          <option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role">{{user_role.display}}</option>
+
+
         </select>
       </div>
     </div>

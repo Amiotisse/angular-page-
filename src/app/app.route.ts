@@ -3,6 +3,7 @@ import {LoginComponent} from "./login/login.component";
 import {ModuleWithProviders} from "@angular/core";
 import {HomeComponent} from "./home/home.component";
 import {SignupComponent} from "./signup/signup.component";
+import {WelcomeComponent} from "./welcome/welcome.component";
 
 const app_routes : Routes  =
   [
@@ -18,6 +19,10 @@ const app_routes : Routes  =
       path : 'signup' ,
       component : SignupComponent
 
+    },
+    {
+      path :'welcome',
+      component : WelcomeComponent
     },
   ];
 
