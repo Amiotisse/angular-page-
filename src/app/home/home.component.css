@@ -75,7 +75,7 @@ img{
   width: 40vw;
   box-sizing: border-box;
   border: 0.02vw solid #d7c9aa;
-  font:bold 2.3vh Arial,Helvetica,sans-serif;
+  font:bold 2.3vh myFont;
   color: #0b7a75;
   border-radius: 2vw ;
   float:left;
