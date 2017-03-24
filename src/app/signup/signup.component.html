@@ -1,1 +1,87 @@
 <app-not-impl-yet></app-not-impl-yet>
+<div class="singup content">
+  <div class="singup title ">
+    <div>S'iscrire</div>
+  </div>
+  <div class="singup information">
+
+    <div class="singup information personal">
+      <span class=" singup role-call "> Information Personnelle  </span>
+      <div class="singup holder">
+        <span class=" singup role-call "> Nom  </span>
+        <input class="singup input line name" type="text" placeholder="Nom"/>
+      </div>
+      <div class="singup holder">
+        <span class=" singup role-call "> Prénom  </span>
+        <input class="singup input line nickname" type="text" placeholder="Prénom"/>
+      </div>
+      <div class="singup holder">
+        <span class=" singup role-call "> Date de naissance  </span>
+        <input class="singup input line date" type="date" placeholder="Date de naissance "/>
+        <span class=" singup role-call ">  Sexe : </span>
+        <select class="singup role-call singup input role-select">
+          <option align="center">Mal</option>
+          <option align="center">Female</option>
+        </select>
+      </div>
+      <div class=" singup holder ">
+        <span class=" singup role-call "> vous êtes :  </span>
+        <select [(ngModel)]="userRoleService.user_roles_selected" class="singup input role-select ">
+          <option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role" align="center">{{user_role.display}}</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="singup information account">
+      <span class=" singup role-call "> Information du Compte  </span>
+      <div class=" singup holder">
+        <label class="singup label">Nom d'utilisateur </label>
+        <input class="singup input line username " type="text" placeholder="Nom d'utilisateur "/>
+      </div>
+
+      <div class=" singup holder">
+        <label class="singup label">Email </label>
+        <input class="singup input line mail " type="email" placeholder="Email"/>
+      </div>
+
+      <div class="singup holder">
+        <label class="singup label">Mot de passe </label>
+        <input class="singup input line mdp " type="password" placeholder="Mot de passe"/>
+      </div>
+
+      <div class="login holder">
+        <label class="singup label">Confirmation du mot de passe </label>
+        <input class="singup input line mdp " type="password" placeholder="Confirmation du mot de passe "/>
+      </div>
+    </div>
+    <div class="singup information contact" >
+      <div class="singup holder">
+        <label></label>
+
+      </div>
+      <div class="singup holder">
+        <label></label>
+
+      </div>
+      <div class="singup holder">
+        <label></label>
+
+      </div>
+      <div class="singup holder">
+        <label></label>
+
+      </div>
+      <div class="singup holder">
+        <label></label>
+
+      </div>
+    </div>
+
+    <div class="singup footer">
+
+
+
+  </div>
+</div>
+</div>

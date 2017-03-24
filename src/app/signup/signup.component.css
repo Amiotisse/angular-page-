@@ -1,0 +1,15 @@
+.working{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  background-color: #19535f;
+  height: 105vh;
+  width: 45vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
