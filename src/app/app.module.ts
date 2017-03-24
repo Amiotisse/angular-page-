@@ -9,6 +9,7 @@ import {routes} from "./app.route";
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { NotImplYetComponent } from './not-impl-yet/not-impl-yet.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NotImplYetComponent } from './not-impl-yet/not-impl-yet.component';
     LoginComponent,
     HomeComponent,
     SignupComponent,
-    NotImplYetComponent
+    NotImplYetComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
