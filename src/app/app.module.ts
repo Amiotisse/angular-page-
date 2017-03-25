@@ -11,6 +11,7 @@ import { SignupComponent } from './signup/signup.component';
 import { NotImplYetComponent } from './not-impl-yet/not-impl-yet.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {UserRoleService} from "./user-role.service";
+import {UserAuthService} from "./user-auth.service";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,11 @@ import {UserRoleService} from "./user-role.service";
     HttpModule,
     routes,
   ],
-  providers: [ UserRoleService],
+  providers: [
+    UserRoleService,
+    UserAuthService,
+  ],
+
   bootstrap: [AppComponent ]
 })
 export class AppModule { }

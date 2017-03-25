@@ -13,22 +13,22 @@
         </select>
       </div>
       <div class=" login holder">
-      <input class="login input line mail " type="email" placeholder="Email"/>
+      <input [(ngModel)]="username" class="login input line mail " type="text" placeholder="Pseudo"/>
        </div>
       <div class="login holder">
-      <input class="login input line mdp " type="password" placeholder="Mot de passe"/>
+      <input [(ngModel)]="password" class="login input line mdp " type="password" placeholder="Mot de passe"/>
       </div>
 
     </div>
     <div >
-      <button class="login btn " [routerLink]="['/welcome']" ><span>Se connecter</span></button>
+      <button class="login btn " (click)="login()" ><span>Se connecter</span></button>
 
     </div>
   </div>
 
   <div class="login footer">
     <div class="login pwd-forgotten">
-      <a class="login footer-text" [routerLink]="['/signup']"> Mot de passe oublié ? </a>
+      <a class="login footer-text" [routerLink]="['/welcome']"> Mot de passe oublié ? </a>
 
     </div>
     <div class="login signup-call ">

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomeComponent implements OnInit {
 
   constructor() { }
-  user_name: string ="user"
+  user_name: string ="User"
   ngOnInit() {
   }
 
