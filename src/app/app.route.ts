@@ -16,7 +16,7 @@ const app_routes : Routes  =
       component : LoginComponent
     },
     {
-      path : '/signup' ,
+      path : 'signup' ,
       component : SignupComponent
 
     },
