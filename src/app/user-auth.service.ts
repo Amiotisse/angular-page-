@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Http, Response} from "@angular/http";
 import 'rxjs/Rx';
+import {error} from "util";
+import {LoginError} from "./login-error.enum";
+import {Observable} from "rxjs";
 @Injectable()
 export class UserAuthService {
 
@@ -15,7 +18,14 @@ export class UserAuthService {
   return this.http.post("http://localhost:8080/token",body)
     .map( (response : Response ) =>{
     this.token= response.text();
-  }) ;
+  }).catch((error : Response) => {
+
+      let login_error : LoginError = null ;
+      if (error.status==404) login_error= LoginError.User_Not_Found;
+      else if (error.status==400) login_error= LoginError.Invalide_Password;
+      return Observable.throw(login_error);
+
+    }) ;
   }
 
 

@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
   username : string ;
   password : string;
   login(){
-    console.log (this.username);
-    console.log (this.password);
+   /* console.log (this.username);
+    console.log (this.password);*/
     this.userAuthService
       .login(this.username,this.password)
       .subscribe(()=>{
