@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
         },
         (error : LoginError)=>{
            this.error = true ;
-           if (error == LoginError.Invalid_Password) this.msgErr = "Invalide mot de passe";
+           if (error == LoginError.Invalid_Password) this.msgErr = "Invalide Mot de Passe";
            else if (error == LoginError.User_Not_Found) this.msgErr = "Pseudo introuvable";
         });
   }

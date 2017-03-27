@@ -1,6 +1,12 @@
 <div class="popup-container">
   <div *ngIf="error" class="popup">
-   <b>{{ msgErr }}</b>
+    <div class="err">
+      <img  src="../../assets/error.svg" width="20vh" height="auto"align="left"/>
+    </div>
+    <div class="txt">
+      <b>{{ msgErr }}</b>
+    </div>
+
   </div>
 </div>
 
@@ -32,7 +38,7 @@
 
   <div class="login footer">
     <div class="login pwd-forgotten">
-      <a class="login footer-text" [routerLink]="['/welcome']"> Mot de passe oublié ? </a>
+      <a class="login footer-text" [routerLink]="['/in-progress']"> Mot de passe oublié ? </a>
 
     </div>
     <div class="login signup-call ">

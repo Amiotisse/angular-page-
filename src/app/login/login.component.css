@@ -1,3 +1,9 @@
+.err{
+  width: 5vw;
+  height: 5vh;
+  margin-top: 5px;
+  padding-left: 10px;
+}
 .popup-container{
   z-index: 1;
   position: fixed;
@@ -10,6 +16,9 @@
   align-items: center;
 }
 .popup{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
   background-color: #f2dede;
   color: #c62828;
   text-align: center;

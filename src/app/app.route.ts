@@ -4,6 +4,7 @@ import {ModuleWithProviders} from "@angular/core";
 import {HomeComponent} from "./home/home.component";
 import {SignupComponent} from "./signup/signup.component";
 import {WelcomeComponent} from "./welcome/welcome.component";
+import {NotImplYetComponent} from "./not-impl-yet/not-impl-yet.component";
 
 const app_routes : Routes  =
   [
@@ -24,6 +25,10 @@ const app_routes : Routes  =
       path :'welcome',
       component : WelcomeComponent
     },
+    {
+      path:'in-progress',
+      component: NotImplYetComponent
+    }
   ];
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(app_routes);

@@ -4,21 +4,20 @@
     <div>S'inscrire</div>
   </div>
 
-  <div class="singup information">
-
-    <div class="singup information personal">
-      <span class=" singup role-call "> Information Personnelle  </span>
-      <div class="singup holder">
-        <span class=" singup label "> Nom  </span>
+  <div class="singup information personal">
+      <span class=" singup section-title "> Information Personnelle  </span>
+      <div class="singup holder ">
+        <span class=" singup label "> Nom : </span>
         <input class="singup input line name" type="text" placeholder="Nom"/>
       </div>
-      <div class="singup holder">
-        <span class=" singup label "> Prénom  </span>
+      <div class="singup holder ">
+        <span class=" singup label "> Prénom : </span>
         <input class="singup input line nickname" type="text" placeholder="Prénom"/>
       </div>
-      <div class="singup holder">
+      <div class="singup holder ">
         <span class=" singup label "> Date de naissance  </span>
         <input class="singup input line date" type="date" placeholder="Date de naissance "/>
+        <!--TODO -->
         <span class=" singup label ">  Sexe : </span>
         <select class="singup input role-select ">
           <option align="center">Mal</option>
@@ -26,73 +25,59 @@
         </select>
       </div>
       <div class=" singup holder ">
-        <span class=" singup label "> vous êtes :  </span>
+        <span class=" singup label "> Vous êtes :  </span>
         <select [(ngModel)]="userRoleService.user_roles_selected" class="singup input role-select ">
           <option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role" align="center">{{user_role.display}}</option>
         </select>
       </div>
     </div>
 
-  </div>
-
-  <div class="singup information">
-
-    <div class="singup information account">
-      <span class=" singup role-call "> Information du Compte  </span>
-      <div class=" singup holder">
-        <label class="singup label">Nom d'utilisateur </label>
+  <div class="singup information account">
+      <span class=" singup section-title "> Information du Compte  </span>
+      <div class=" singup holder ">
+        <label class="singup label">Nom d'utilisateur : </label>
         <input class="singup input line username " type="text" placeholder="Nom d'utilisateur "/>
       </div>
 
-      <div class=" singup holder">
-        <label class="singup label">Email </label>
+      <div class=" singup holder ">
+        <label class="singup label">Email : </label>
         <input class="singup input line mail " type="email" placeholder="Email"/>
       </div>
 
-      <div class="singup holder">
-        <label class="singup label">Mot de passe </label>
+      <div class="singup holder ">
+        <label class="singup label">Mot de passe :</label>
         <input class="singup input line mdp " type="password" placeholder="Mot de passe"/>
       </div>
 
-      <div class="login holder">
-        <label class="singup label">Confirmation du mot de passe </label>
+      <div class="login holder ">
+        <label class="singup label">Confirmation du mot de passe :</label>
         <input class="singup input line mdp " type="password" placeholder="Confirmation du mot de passe "/>
       </div>
     </div>
 
-  </div>
-
-  <div class="singup information">
-
-    <div class="singup information contact" >
-      <span class=" singup role-call "> Information du Contact </span>
-      <div class="singup holder">
+  <div class="singup information contact" >
+      <span class=" singup section-title "> Information du Contact </span>
+      <div class="singup holder  ">
         <label class="singup label">Adresse :</label>
-        <input class="singup input" type="text" placeholder="Adresse"/>
+        <textarea class="singup input" type="text" placeholder="Adresse"> </textarea>
       </div>
-      <div class="singup holder">
-        <label class="singup label" >City :</label>
-        <input class="singup input" type="text" placeholder="City"/>
 
-      </div>
-      <div class="singup holder">
+      <div class="singup holder ">
         <label class="singup label">Ville :</label>
         <input class="singup input" type="text" placeholder="Ville"/>
 
       </div>
-      <div class="singup holder">
+      <div class="singup holder ">
         <label class="singup label">Numéro de télépone :</label>
-        <input class="singup input" type="number" placeholder="Numéro de téléphone"/>
+        <input class="singup input" type="text" placeholder="Numéro de téléphone"/>
 
       </div>
-      <div class="singup holder">
+      <div class="singup holder ">
         <label class="singup label">Code Postal :</label>
-        <input class="singup input" type="number" placeholder="Code Postal"/>
+        <input class="singup input" type="text" placeholder="Code Postal"/>
 
       </div>
     </div>
-
-  </div>
 
   <div class="singup footer">
     <input class="singup condition" type="checkbox"/> <label>I agree with the terms and conditions.</label>

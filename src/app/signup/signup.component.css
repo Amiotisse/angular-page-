@@ -20,45 +20,56 @@
   color: #f0f3f5;
   font-size: 5vh ;
   width: auto;
-  height: 15vh;
+  height: 8vh;
   text-align: center;
 }
 .information{
+  background-color: #7b2d26  ;
+  width: 30vw;
   display: flex;
   flex-flow: column wrap;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: left;
-  height: 22vh;
 }
-.role-call{
+.personal{
+  height: 30vh;
+}
+.account{
+  height: 30vh;
+}
+.contact{
+  height: 30vh;
+}
+.section-title{
   color: #f0f3f5;
-  font-size: 4vh ;
-  text-align: left;
-}
-.role-select {
+  font-size: 4.5vh ;
+  width: auto;
+  height: 8vh;
   text-align: center;
-  font-size: 2.5vh;
-  background-color: #d7c9aa;
-  border-radius: 0.5vh;
-  color: #7b2d26;
-  width: 9vw;
-  height: 5vh;
+}
+.holder{
+  flex-flow: row wrap ;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  height: 5.5vh;
 }
 .label{
   color: #d7c9aa;
   font-size: 2.5vh ;
-  width: 6vw;
-  height: 8vh;
-  text-align: left;
+  width: 10vw;
+  text-align: end;
+  padding-right: 1.5vw;
+
 }
-.input {
+
+
+.input{
   text-align: left;
   font-size: 2.5vh;
   background-color: #d7c9aa;
   border-radius: 0.5vh;
-  color: #7b2d26;
   border: none;
+  height: 2.8vh;
+  width: 15vw;
 }
-::-webkit-input-placeholder {  color:#7b2d26 ;
-}
-
