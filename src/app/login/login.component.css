@@ -10,14 +10,15 @@
   align-items: center;
 }
 .popup{
-  background-color: #EA8C55;
-  color: #5E1114;
+  background-color: #f2dede;
+  color: #c62828;
   text-align: center;
   margin-top: 5px;
   border-radius: 0.5vh;
+  border : solid 1px #c62828 ;
   width: 30vw;
-  height: 3vh;
-  line-height: 3vh;
+  height: 5vh;
+  line-height: 5vh;
 }
 .working{
   display: flex;
