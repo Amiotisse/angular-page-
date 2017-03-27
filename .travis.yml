@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+- "6.9"
+
+dist: trusty
+sudo: required
+
+services:
+- docker
+
+env:
+  global:
+  - dockerImagePrefix: amiotisse
+  - dockerImageName: unbsunu-front
+  - dockerImageTag: RC1
+  - dockerImage: $dockerImagePrefix/$dockerImageName:$dockerImageTag
+
+before_script:
+- npm install -g @angular/cli
+
+script:
+- npm install
+- ng build --prod
+- docker build -t $dockerImage
+
+after_success:
+- docker login -u$DOCKER_HUB_USERNAME -p$DOCKER_HUB_PASSWORD
+- docker push $dockerImage
+
