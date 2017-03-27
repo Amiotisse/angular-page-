@@ -1,3 +1,8 @@
+<div class="popup-container">
+  <div *ngIf="error" class="popup">
+    {{ msgErr }}
+  </div>
+</div>
 
 <div class="login content">
   <div class="login title ">
@@ -13,16 +18,15 @@
         </select>
       </div>
       <div class=" login holder">
-      <input [(ngModel)]="username" class="login input line mail " type="text" placeholder="Pseudo"/>
+      <input [(ngModel)]="username" class="login input line mail " type="text" placeholder="Pseudo" (keypress)="key($event)"/>
        </div>
       <div class="login holder">
-      <input [(ngModel)]="password" class="login input line mdp " type="password" placeholder="Mot de passe"/>
+      <input [(ngModel)]="password" class="login input line mdp " type="password" placeholder="Mot de passe" (keypress)="key($event)"/>
       </div>
 
     </div>
     <div >
-      <button class="login btn " (click)="login()" ><span>Se connecter</span></button>
-
+      <button class="login btn " (click)="login()"  autofocus ><span>Se connecter</span></button>
     </div>
   </div>
 
