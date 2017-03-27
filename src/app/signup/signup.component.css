@@ -24,7 +24,7 @@
   text-align: center;
 }
 .information{
-  background-color: #7b2d26  ;
+
   width: 30vw;
   display: flex;
   flex-flow: column wrap;
@@ -60,7 +60,6 @@
   width: 10vw;
   text-align: end;
   padding-right: 1.5vw;
-
 }
 
 
@@ -72,4 +71,11 @@
   border: none;
   height: 2.8vh;
   width: 15vw;
+}
+.holder-containe{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: auto ;
+  height: auto;
 }
