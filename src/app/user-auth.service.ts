@@ -15,7 +15,7 @@ export class UserAuthService {
         user_name: username,
         password:  password,
     };
-  return this.http.post("http://localhost:8080/token",body)
+  return this.http.post("api/alphau/token",body)
     .map( (response : Response ) =>{
     this.token= response.text();
   }).catch((error : Response) => {
