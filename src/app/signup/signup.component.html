@@ -17,12 +17,12 @@
     </div>
 
     <div class="singup holder">
-      <input class="singup input line" type="text" placeholder="Mot de passe" (keypress)="key($event)"/>
-      <input class="singup input line" type="text" placeholder="Etablissement" (keypress)="key($event)"/>
+      <input class="singup input line" type="password" placeholder="Mot de passe" (keypress)="key($event)"/>
+      <input class="singup input line" type="password" placeholder="Confirmer Mot de passe" (keypress)="key($event)"/>
     </div>
 
     <div class="singup holder ">
-      <input class="singup input line" type="text" placeholder=" Confirmer Mot de passe" (keypress)="key($event)"/>
+      <input class="singup input line" type="text" placeholder=" Etablissement " (keypress)="key($event)"/>
       <span class=" signup role-call "> Vous êtes : </span>
       <select [(ngModel)]="userRoleService.user_roles_selected" class="login input role-select ">
         <option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role" align="center">{{user_role.display}}</option>
