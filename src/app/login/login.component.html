@@ -1,14 +1,4 @@
-<div class="popup-container">
-  <div *ngIf="error" class="popup">
-    <div class="err">
-      <img  src="../../assets/error.svg" width="20vh" height="auto"align="left"/>
-    </div>
-    <div class="txt">
-      <b>{{ msgErr }}</b>
-    </div>
-
-  </div>
-</div>
+<app-error-displayer [errors]="errors"></app-error-displayer>
 
 <div class="login content">
   <div class="login title ">

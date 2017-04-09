@@ -3,8 +3,6 @@ import {UserRoleService} from "../user-role.service";
 import {UserAuthService} from "../user-auth.service";
 import {Router} from "@angular/router";
 
-import {LoginError} from "../login-error.enum";
-
 @Component({
   selector: 'app-login',
   templateUrl: 'login.component.html',
@@ -18,11 +16,10 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) { }
 
-  error : boolean;
-  msgErr : string;
+  errors : any [];
 
   ngOnInit() {
-    this.error = false ;
+    this.errors = [] ;
   }
   username : string ;
   password : string;
@@ -33,18 +30,16 @@ export class LoginComponent implements OnInit {
   login(){
    /* console.log (this.username);
     console.log (this.password);*/
-   this.error = false ;
-    this.userAuthService
+   this.errors = [] ;
+   this.userAuthService
       .login(this.username,this.password)
       .subscribe(
-        ()=>{
-          this.router.navigate(['/welcome']);
-        },
-        (error : LoginError)=>{
-           this.error = true ;
-           if (error == LoginError.Invalid_Password) this.msgErr = "Invalide Mot de Passe";
-           else if (error == LoginError.User_Not_Found) this.msgErr = "Pseudo introuvable";
-        });
+        () => this.router.navigate(['/welcome']),
+        (error) => {
+          console.log(error);
+          this.errors.push(error)
+        }
+      );
   }
 
 }

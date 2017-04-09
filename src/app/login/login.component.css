@@ -1,34 +1,3 @@
-.err{
-  width: 5vw;
-  height: 5vh;
-  margin-top: 5px;
-  padding-left: 10px;
-}
-.popup-container{
-  z-index: 1;
-  position: fixed;
-  width: 100%;
-  right: 0;
-  top : 1vh ;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-.popup{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  background-color: #f2dede;
-  color: #c62828;
-  text-align: center;
-  margin-top: 5px;
-  border-radius: 0.5vh;
-  border : solid 1px #c62828 ;
-  width: 30vw;
-  height: 5vh;
-  line-height: 5vh;
-}
 .working{
   display: flex;
   flex-flow: column wrap;

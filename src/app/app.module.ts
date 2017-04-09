@@ -12,6 +12,7 @@ import { NotImplYetComponent } from './not-impl-yet/not-impl-yet.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {UserRoleService} from "./user-role.service";
 import {UserAuthService} from "./user-auth.service";
+import { ErrorDisplayerComponent } from './error-displayer/error-displayer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {UserAuthService} from "./user-auth.service";
     HomeComponent,
     SignupComponent,
     NotImplYetComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ErrorDisplayerComponent
   ],
   imports: [
     BrowserModule,
