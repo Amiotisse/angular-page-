@@ -5,14 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import {routes} from "./app.route";
+import { routes } from "./app.route";
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { NotImplYetComponent } from './not-impl-yet/not-impl-yet.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import {UserRoleService} from "./user-role.service";
-import {UserAuthService} from "./user-auth.service";
+import { UserRoleService } from "./user-role.service";
+import { UserAuthService } from "./user-auth.service";
 import { ErrorDisplayerComponent } from './error-displayer/error-displayer.component';
+import { ProfileService } from "./profile.service";
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ErrorDisplayerComponent } from './error-displayer/error-displayer.compo
   providers: [
     UserRoleService,
     UserAuthService,
+    ProfileService
   ],
 
   bootstrap: [AppComponent ]
