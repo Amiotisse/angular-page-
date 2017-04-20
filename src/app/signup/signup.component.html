@@ -3,28 +3,47 @@
   <div class="singup title ">
     <div>S'inscrire</div>
   </div>
-
+<!--form (ngSubmit)="onSubmit()"-->
   <div class="signup form" >
 
     <div class="singup holder">
-      <input class="singup input line" type="text" placeholder="Pseudo" />
-      <input class="singup input line" type="text" placeholder="Nom" />
+      <input class="singup input line" type="text" placeholder="Pseudo" ngNativeValidate name="username"/>
+      <input class="singup input line" type="text" placeholder="Nom"/>
+      <!--[(ngModel)]="person.name"
+      name="name"
+      required
+      /-->
+
     </div>
 
     <div class="singup holder">
-      <input class="singup input line" type="text" placeholder="Email" />
+      <input class="singup input line"
+             type="text"
+             placeholder="Email" />
+             <!--ngNativeValidate
+             [(ngModel)]="person.name"
+             name="email"
+             required/-->
+
       <input class="singup input line" type="text" placeholder="Prénom" />
+
     </div>
 
     <div class="singup holder">
       <input class="singup input line" type="password" placeholder="Mot de passe" />
+
+
       <input class="singup input line" type="password" placeholder="Confirmer Mot de passe" />
+
     </div>
 
     <div class="singup holder ">
       <input class="singup input line" type="text" placeholder=" Etablissement " />
+
       <span class=" signup role-call "> Vous êtes : </span>
       <select [(ngModel)]="userRoleService.user_roles_selected" class="login input role-select ">
+
+
         <option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role" align="center">{{user_role.display}}</option>
       </select>
     </div>
@@ -34,13 +53,15 @@
   <div class="singup footer">
 
     <div class="singup condition">
-      <input  type="checkbox"/> <label>j'accepte les termes et conditions</label>
+      <input  type="checkbox"/>
+      <label>j'accepte les termes et conditions</label>
     </div>
 
-    <button class="singup btn " [routerLink]="['/welcome']" ><span>Crée un compte</span></button>
+    <button class="singup btn " [routerLink]="['/welcome']" type="submit"> <span>Crée un compte</span></button>
+
     <div class="singup cancel">
       <a class="singup footer-text" [routerLink]="['/']"> Annuler </a>
     </div>
   </div>
-
+<!--/form-->
 </div>

@@ -5,12 +5,16 @@ import {UserRoleService} from "../user-role.service";
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
+
 })
 export class SignupComponent implements OnInit {
 
   constructor( public userRoleService: UserRoleService) { }
+  //person={};
 
   ngOnInit() {
   }
-
+  onSubmit(){
+  console.log('envoyer !!');
+  }
 }
