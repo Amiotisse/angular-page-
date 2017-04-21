@@ -14,11 +14,11 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { UserRoleService } from "./user-role.service";
 import { UserAuthService } from "./user-auth.service";
 import { ErrorDisplayerComponent } from './error-displayer/error-displayer.component';
-<<<<<<< HEAD
+
 import { ProfilComponent } from './profil/profil.component';
-=======
+
 import { ProfileService } from "./profile.service";
->>>>>>> 5c30e08f27161b7649ceafe7ad927d7b4a7b65dc
+
 
 @NgModule({
   declarations: [
