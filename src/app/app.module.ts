@@ -6,15 +6,19 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import {routes} from "./app.route";
+import { routes } from "./app.route";
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { NotImplYetComponent } from './not-impl-yet/not-impl-yet.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import {UserRoleService} from "./user-role.service";
-import {UserAuthService} from "./user-auth.service";
+import { UserRoleService } from "./user-role.service";
+import { UserAuthService } from "./user-auth.service";
 import { ErrorDisplayerComponent } from './error-displayer/error-displayer.component';
+<<<<<<< HEAD
 import { ProfilComponent } from './profil/profil.component';
+=======
+import { ProfileService } from "./profile.service";
+>>>>>>> 5c30e08f27161b7649ceafe7ad927d7b4a7b65dc
 
 @NgModule({
   declarations: [
@@ -37,6 +41,7 @@ import { ProfilComponent } from './profil/profil.component';
   providers: [
     UserRoleService,
     UserAuthService,
+    ProfileService
   ],
 
   bootstrap: [AppComponent ]

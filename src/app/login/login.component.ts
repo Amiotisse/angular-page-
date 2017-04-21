@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UserRoleService} from "../user-role.service";
 import {UserAuthService} from "../user-auth.service";
 import {Router} from "@angular/router";
+import {ProfileService} from "../profile.service";
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,7 @@ export class LoginComponent implements OnInit {
   constructor(
     public userRoleService: UserRoleService ,
     private userAuthService: UserAuthService,
+    private profileService: ProfileService,
     private router: Router
   ) { }
 
@@ -32,14 +34,15 @@ export class LoginComponent implements OnInit {
     console.log (this.password);*/
    this.errors = [] ;
    this.userAuthService
-      .login(this.username,this.password)
-      .subscribe(
-        () => this.router.navigate(['/welcome']),
-        (error) => {
+     .login(this.username,this.password)
+     .then( ()=> this.profileService.getProfile())
+     .then( (profile) => console.log(profile))
+     .then(() => this.router.navigate(['/welcome']))
+     .catch((error) => {
           console.log(error);
-          this.errors.push(error)
-        }
-      );
+          this.errors.push(error);
+     })
+   ;
   }
 
 }
