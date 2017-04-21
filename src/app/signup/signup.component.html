@@ -3,47 +3,72 @@
   <div class="singup title ">
     <div>S'inscrire</div>
   </div>
-<!--form (ngSubmit)="onSubmit()"-->
+<!--form [formGroup]="signupForm" (ngSubmit)="onSubmit()"-->
   <div class="signup form" >
 
     <div class="singup holder">
-      <input class="singup input line" type="text" placeholder="Pseudo" ngNativeValidate name="username"/>
-      <input class="singup input line" type="text" placeholder="Nom"/>
-      <!--[(ngModel)]="person.name"
-      name="name"
-      required
-      /-->
+      <input class="singup input line"
+             type="text" placeholder="Pseudo"
+             name="username"
+             required
+      />
+      <!--span
+        *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched"
+        class="help-block">
+        <span *ngIf="signupForm.get('userData.username').errors['required']">This field is required!</span>
+
+      </span-->
+
+      <input class="singup input line"
+             type="text"
+             placeholder="Nom"
+             name="name"
+             required
+
+      />
 
     </div>
 
     <div class="singup holder">
       <input class="singup input line"
              type="text"
-             placeholder="Email" />
-             <!--ngNativeValidate
-             [(ngModel)]="person.name"
+             placeholder="Email"
              name="email"
-             required/-->
+             required
+             email
+      />
 
-      <input class="singup input line" type="text" placeholder="Prénom" />
+      <input class="singup input line"
+             type="text"
+             placeholder="Prénom"
+             required
+      />
 
     </div>
 
     <div class="singup holder">
-      <input class="singup input line" type="password" placeholder="Mot de passe" />
+      <input class="singup input line"
+             type="password"
+             placeholder="Mot de passe"
+      />
 
 
-      <input class="singup input line" type="password" placeholder="Confirmer Mot de passe" />
+      <input class="singup input line"
+             type="password"
+             placeholder="Confirmer Mot de passe"
+
+      />
 
     </div>
 
     <div class="singup holder ">
-      <input class="singup input line" type="text" placeholder=" Etablissement " />
+      <input class="singup input line"
+             type="text"
+             placeholder=" Etablissement "
+      />
 
       <span class=" signup role-call "> Vous êtes : </span>
       <select [(ngModel)]="userRoleService.user_roles_selected" class="login input role-select ">
-
-
         <option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role" align="center">{{user_role.display}}</option>
       </select>
     </div>
@@ -57,7 +82,7 @@
       <label>j'accepte les termes et conditions</label>
     </div>
 
-    <button class="singup btn " [routerLink]="['/welcome']" type="submit"> <span>Crée un compte</span></button>
+    <button class="singup btn " [routerLink]="['/profil']" type="submit"> <span>Crée un compte</span></button>
 
     <div class="singup cancel">
       <a class="singup footer-text" [routerLink]="['/']"> Annuler </a>

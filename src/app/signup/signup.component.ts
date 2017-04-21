@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserRoleService} from "../user-role.service";
+import {NgForm, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-signup',
@@ -10,9 +11,11 @@ import {UserRoleService} from "../user-role.service";
 export class SignupComponent implements OnInit {
 
   constructor( public userRoleService: UserRoleService) { }
+  //signupForm: FormGroup;
   //person={};
 
   ngOnInit() {
+
   }
   onSubmit(){
   console.log('envoyer !!');

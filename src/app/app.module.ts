@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import {UserRoleService} from "./user-role.service";
 import {UserAuthService} from "./user-auth.service";
 import { ErrorDisplayerComponent } from './error-displayer/error-displayer.component';
+import { ProfilComponent } from './profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +24,12 @@ import { ErrorDisplayerComponent } from './error-displayer/error-displayer.compo
     SignupComponent,
     NotImplYetComponent,
     WelcomeComponent,
-    ErrorDisplayerComponent
+    ErrorDisplayerComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
+    //ReactiveFormsModule,
     FormsModule,
     HttpModule,
     routes,

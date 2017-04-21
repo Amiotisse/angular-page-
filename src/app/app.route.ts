@@ -5,6 +5,7 @@ import {HomeComponent} from "./home/home.component";
 import {SignupComponent} from "./signup/signup.component";
 import {WelcomeComponent} from "./welcome/welcome.component";
 import {NotImplYetComponent} from "./not-impl-yet/not-impl-yet.component";
+import {ProfilComponent} from "./profil/profil.component";
 
 const app_routes : Routes  =
   [
@@ -24,6 +25,10 @@ const app_routes : Routes  =
     {
       path :'welcome',
       component : WelcomeComponent
+    },
+    {
+      path: 'profil',
+      component: ProfilComponent
     },
     {
       path:'in-progress',

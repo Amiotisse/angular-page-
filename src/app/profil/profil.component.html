@@ -1,0 +1,69 @@
+<form>
+  <div>
+    <div class="menu-form" style="left:0;">
+      <button  [routerLink]="['/profil']" href="#" class="downbtn" >Profil </button>
+      <button [routerLink]="['/welcome']" href="#" class="downbtn" >Espace de travail </button>
+        <div class="menu-content" >
+          <a href="#">Module</a>
+          <a href="#">Session</a>
+          <a href="#">Evaluation</a>
+          <a href="#">Liste des etudiant</a>
+          <a href="#">Notes</a>
+          <a href="#">Notifications</a>
+        </div>
+    </div>
+
+    <div class="menu_form" style="float:right;">
+        <button [routerLink]="['/profil']" href="#"  class="downbtn nom">Nom </button>
+
+          <div class="menu-content" style="right:0;" >
+            <a>paramètres</a>
+            <a>Se deconecter</a>
+          </div>
+    </div>
+  </div>
+  <div class="content profil ">
+
+  <div>
+   <div class="profil holder form">
+     <input class="profil input line"
+           type="text"
+           placeholder=" Nom "
+    />
+   </div>
+  <div class="profil holder form">
+    <input class="profil input line"
+             type="text"
+             placeholder=" Prénom "
+    />
+  </div>
+  <div class="profil holder form">
+    <input class="profil input line"
+           type="date"
+           placeholder="Date de naissance"
+    />
+  </div>
+  <div class="profil holder form">
+    <input class="profil input line"
+           type="email"
+           placeholder="Email"
+    />
+  </div>
+  <div class="profil holder form">
+    <input class="profil input line"
+           type="text"
+           placeholder="Etabissement"
+    />
+  </div>
+  <div class="profil holder form">
+    <textarea class="profil input area"
+           rows="100"
+           type="text"
+           placeholder="Sujet de recherche "
+    ></textarea>
+  </div>
+
+
+  </div>
+  </div>
+</form>
