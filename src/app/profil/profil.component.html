@@ -1,28 +1,28 @@
 <form>
-  <div>
+<div>
     <div class="menu-form" style="left:0;">
-      <button  [routerLink]="['/profil']" href="#" class="downbtn" >Profil </button>
-      <button [routerLink]="['/welcome']" href="#" class="downbtn" >Espace de travail </button>
+      <button  [routerLink]="['/profil']"  class="downbtn" >Profil </button>
+      <button [routerLink]="['/welcome']"  class="downbtn" >Espace de travail </button>
         <div class="menu-content" >
-          <a href="#">Module</a>
-          <a href="#">Session</a>
-          <a href="#">Evaluation</a>
-          <a href="#">Liste des etudiant</a>
-          <a href="#">Notes</a>
-          <a href="#">Notifications</a>
+          <a [routerLink]="['/profil']">Module</a>
+          <a [routerLink]="['/profil']">Session</a>
+          <a [routerLink]="['/profil']">Evaluation</a>
+          <a [routerLink]="['/profil']">Liste des etudiant</a>
+          <a [routerLink]="['/profil']">Notes</a>
+          <a [routerLink]="['/profil']">Notifications</a>
         </div>
     </div>
 
-    <div class="menu_form" style="float:right;">
+  <div class="menu-form" style="float:right;">
       <!--img src="assets/professor.svg"  style="width:10%"-->
-        <button [routerLink]="['/profil']" href="#"  class="downbtn nom">Nom </button>
-
-          <div class="menu-content" style="right:0;" >
-            <a>paramètres</a>
-            <a>Se deconecter</a>
-          </div>
-    </div>
+        <button [routerLink]="['/profil']" href="#"class="downbtn nom">Nom </button>
+      <div class="menu-content">
+          <a>paramètres</a>
+          <a>Se deconecter</a>
+      </div>
   </div>
+
+</div>
   <div class="content profil ">
 
   <div class="p-left">
@@ -65,8 +65,8 @@
   </div>
 
     <!--div class="card">
-      <img src="assets/professor.svg"  style="width:15%">
-    </--div-->
+      <input type="file"/>
+    </div-->
 
   </div>
   </div>
