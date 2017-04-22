@@ -7,6 +7,7 @@ import {WelcomeComponent} from "./welcome/welcome.component";
 import {NotImplYetComponent} from "./not-impl-yet/not-impl-yet.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {WorkspaceComponent} from "./workspace/workspace.component";
+import {ProfileSettingsComponent} from "./profile-settings/profile-settings.component";
 
 const app_routes : Routes  =
   [
@@ -30,6 +31,10 @@ const app_routes : Routes  =
     {
       path: 'profile',
       component: ProfileComponent
+    },
+    {
+      path: 'profile-settings',
+      component: ProfileSettingsComponent
     },
     {
       path: 'workspace',
