@@ -9,6 +9,7 @@ export class ProfileService {
 
   public profile : any;
 
+
   getProfile(){
     let headers : Headers = new Headers();
     this.userAuthService.appendAuthHeader(headers);

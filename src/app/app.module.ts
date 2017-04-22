@@ -15,9 +15,11 @@ import { UserRoleService } from "./user-role.service";
 import { UserAuthService } from "./user-auth.service";
 import { ErrorDisplayerComponent } from './error-displayer/error-displayer.component';
 
-import { ProfilComponent } from './profil/profil.component';
+import { ProfileComponent } from './profile/profile.component';
 
 import { ProfileService } from "./profile.service";
+import { WorkspaceComponent } from './workspace/workspace.component';
+import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 
 
 @NgModule({
@@ -29,11 +31,13 @@ import { ProfileService } from "./profile.service";
     NotImplYetComponent,
     WelcomeComponent,
     ErrorDisplayerComponent,
-    ProfilComponent
+    ProfileComponent,
+    WorkspaceComponent,
+    ProfileSettingsComponent
   ],
   imports: [
     BrowserModule,
-    //ReactiveFormsModule,
+    ReactiveFormsModule,
     FormsModule,
     HttpModule,
     routes,

@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
      .login(this.username,this.password)
      .then( ()=> this.profileService.getProfile())
      .then( (profile) => console.log(profile))
-     .then(() => this.router.navigate(['/welcome']))
+     .then(() => this.router.navigate(['/profile']))
      .catch((error) => {
           console.log(error);
           this.errors.push(error);

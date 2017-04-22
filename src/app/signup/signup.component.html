@@ -1,92 +1,82 @@
+<app-error-displayer [errors]="errors"></app-error-displayer>
+
 <div class="singup content">
 
   <div class="singup title ">
     <div>S'inscrire</div>
   </div>
-<!--form [formGroup]="signupForm" (ngSubmit)="onSubmit()"-->
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
   <div class="signup form" >
 
     <div class="singup holder">
       <input class="singup input line"
              type="text" placeholder="Pseudo"
+             formControlName="username"
              name="username"
-             required
       />
       <!--span
-        *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched"
-        class="help-block">
-        <span *ngIf="signupForm.get('userData.username').errors['required']">This field is required!</span>
-
+        *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched" class="help-block">
+        Entrer votre Pseodo S'il vous plait
       </span-->
-
       <input class="singup input line"
              type="text"
              placeholder="Nom"
+             formControlName="name"
              name="name"
-             required
-
       />
-
     </div>
-
     <div class="singup holder">
       <input class="singup input line"
              type="text"
              placeholder="Email"
+             formControlName="email"
              name="email"
-             required
-             email
       />
-
       <input class="singup input line"
              type="text"
              placeholder="Prénom"
-             required
+             formControlName="firstname"
       />
-
     </div>
-
     <div class="singup holder">
       <input class="singup input line"
              type="password"
+             formControlName="password"
              placeholder="Mot de passe"
       />
-
-
       <input class="singup input line"
              type="password"
              placeholder="Confirmer Mot de passe"
-
+             formControlName="confirm_password"
       />
-
     </div>
-
     <div class="singup holder ">
       <input class="singup input line"
              type="text"
+             formControlName="etablish"
              placeholder=" Etablissement "
       />
-
       <span class=" signup role-call "> Vous êtes : </span>
-      <select [(ngModel)]="userRoleService.user_roles_selected" class="login input role-select ">
-        <option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role" align="center">{{user_role.display}}</option>
+      <select [(ngModel)]="userRoleService.user_roles_selected"
+              class="login input role-select "
+              formControlName="rol_call"
+      >
+        <option *ngFor="let user_role of userRoleService.user_roles"
+                [ngValue]="user_role" align="center">
+          {{user_role.display}}
+        </option>
       </select>
     </div>
-
   </div>
-
   <div class="singup footer">
-
     <div class="singup condition">
       <input  type="checkbox"/>
       <label>j'accepte les termes et conditions</label>
     </div>
-
-    <button class="singup btn " [routerLink]="['/profil']" type="submit"> <span>Crée un compte</span></button>
-
+    <button class="singup btn " type="submit"> <span>Crée un compte</span></button>
     <div class="singup cancel">
       <a class="singup footer-text" [routerLink]="['/']"> Annuler </a>
     </div>
   </div>
-<!--/form-->
+</form>
 </div>

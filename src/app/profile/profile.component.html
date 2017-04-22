@@ -2,20 +2,20 @@
 <div>
     <div class="menu-form" style="left:0;">
       <button  [routerLink]="['/profil']"  class="downbtn" >Profil </button>
-      <button [routerLink]="['/welcome']"  class="downbtn" >Espace de travail </button>
+      <button   class="downbtn" >Espace de travail </button>
         <div class="menu-content" >
-          <a [routerLink]="['/profil']">Module</a>
-          <a [routerLink]="['/profil']">Session</a>
-          <a [routerLink]="['/profil']">Evaluation</a>
-          <a [routerLink]="['/profil']">Liste des etudiant</a>
-          <a [routerLink]="['/profil']">Notes</a>
-          <a [routerLink]="['/profil']">Notifications</a>
+          <a [routerLink]="['/workspace']">Module</a>
+          <a [routerLink]="['/workspace']">Session</a>
+          <a [routerLink]="['/workspace']">Evaluation</a>
+          <a [routerLink]="['/workspace']">Liste des etudiant</a>
+          <a [routerLink]="['/workspace']">Notes</a>
+          <a [routerLink]="['/workspace']">Notifications</a>
         </div>
     </div>
 
   <div class="menu-form" style="float:right;">
-      <!--img src="assets/professor.svg"  style="width:10%"-->
-        <button [routerLink]="['/profil']" href="#"class="downbtn nom">Nom </button>
+      <!--img src="assets/professor.svg" -->
+        <button [routerLink]="['/profile']" class="downbtn nom">{{profileService.profile.userName }} </button>
       <div class="menu-content">
           <a>paramètres</a>
           <a>Se deconecter</a>
