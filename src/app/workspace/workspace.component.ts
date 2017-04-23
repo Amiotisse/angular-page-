@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProfileService} from "../profile.service";
 
 @Component({
   selector: 'app-workspace',
@@ -7,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkspaceComponent implements OnInit {
 
-  constructor() { }
-
+  constructor( public profileService : ProfileService ) { }
   ngOnInit() {
   }
 
