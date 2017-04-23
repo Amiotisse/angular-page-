@@ -1,4 +1,26 @@
+<form>
+  <div>
+    <div class="menu-form" style="left:0;">
+      <button  [routerLink]="['/profil']"  class="downbtn" >Profil </button>
+      <button   class="downbtn" >Espace de travail </button>
+      <div class="menu-content" >
+        <a [routerLink]="['/workspace']">Module</a>
+        <a [routerLink]="['/workspace']">Session</a>
+        <a [routerLink]="['/workspace']">Evaluation</a>
+        <a [routerLink]="['/workspace']">Liste des etudiant</a>
+        <a [routerLink]="['/workspace']">Notes</a>
+        <a [routerLink]="['/workspace']">Notifications</a>
+      </div>
+    </div>
 
+    <div class="menu-form" style="float:right;">
+      <!--img src="assets/professor.svg" -->
+      <button [routerLink]="['/profile']" class="downbtn nom">{{profileService.profile.userName }} </button>
+      <div class="menu-content">
+        <a [routerLink]="['/profile-settings']">paramètres</a>
+        <a>Se deconecter</a>
+      </div>
+    </div>
 <div class="content profil ">
 
   <div class="p-left">
@@ -46,3 +68,5 @@
 
   </div>
 </div>
+</div>
+ </form>
