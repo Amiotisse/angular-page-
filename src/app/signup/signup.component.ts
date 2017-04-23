@@ -13,10 +13,10 @@ export class SignupComponent implements OnInit {
   constructor( public userRoleService: UserRoleService) { }
   signupForm: FormGroup;
   usernameFormControl :FormControl;
-  error: any[];
+  errors: any[];
 
   ngOnInit() {
-    this.usernameFormControl =new FormControl(
+    this.usernameFormControl = new FormControl(
       null,
       [
         Validators.required,
