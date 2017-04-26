@@ -4,6 +4,6 @@ export const LoginErrors = {
     description : "Pseudo introuvable"
   },
   "INVALIDE_PASSWORD" : {
-    description : "Invalide Mot de Passe"
+    description : "Mot de Passe invalide "
   }
 };
