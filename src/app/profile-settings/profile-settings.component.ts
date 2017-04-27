@@ -8,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ProfileSettingsComponent implements OnInit {
 
 //   function_myFunction() {
-//   document.getElementById("myDropdown").classList.toggle("show");
+//   document.getElementByClassName("downbtn").classList.toggle("show");
 // }
 //
-// // Close the dropdown if the user clicks outside of it
+// // Close the downbtn if the user clicks outside of it
 //   window.onclick = function(event) {
-//   if (!event.target.matches('.dropbtn')) {
+//   if (!event.target.matches('.downbtn')) {
 //
-//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var downbtn = document.getElementsByClassName("downbtn-content");
 //     var i;
 //     for (i = 0; i < dropdowns.length; i++) {
 //       var openDropdown = dropdowns[i];

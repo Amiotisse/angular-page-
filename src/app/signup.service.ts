@@ -3,7 +3,7 @@ import {Http} from "@angular/http";
 
 @Injectable()
 export class SignupService {
-  token : string ;
+  /*token : string ;
 
   constructor( private http : Http  ) {
     this.token=null;
@@ -27,6 +27,6 @@ export class SignupService {
         this.token= response.text();
       })
 
-  }
+  }*/
 
 }
