@@ -7,19 +7,18 @@
   justify-content: space-around;
   align-items: center;
 }
-
-
 .line{
   width: 20vw;
   height: 5vh;
   padding: 0.5vh;
   padding-left: 1vw;
+  color: #f0f3f5;
+  font-size: 4vh;
 }
 .area{
   width: 21vw;
   height: auto;
 }
-
 .holder{
   flex-flow: row wrap ;
   /*justify-content: flex-start;*/
@@ -33,12 +32,11 @@
 .input {
   text-align: left;
   font-size: 2.5vh;
-  background-color: #d7c9aa;
+  background-color: #f0f3f5;
   border-radius: 0.5vh;
   color: #7b2d26;
   border: none;
 }
-
 ::-webkit-input-placeholder {  color:#7b2d26 ;
 }
 .form{
@@ -57,12 +55,10 @@
   cursor: pointer;
 
 }
-
 .menu-form {
   position: relative;
   display: inline-block;
 }
-
 .menu-content {
   display: none;
   position: absolute;
@@ -72,24 +68,19 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 0;
 }
-
 .menu-content a {
   color: #f0f3f5;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
 .menu-content a:hover {background-color: #d7c9aa}
-
 .menu-form:hover .menu-content {
   display: block;
 }
-
 .menu-form:hover .menu-content {
   background-color: #0b7a75;
 }
-
 .nom{
   width: 15vw;
   background-color: #19535f;
@@ -98,7 +89,13 @@
   border-radius: 0.2vh;
   margin: 0.2vh;
 }
-.card{
-
+.img{
+  border-radius: 50%;
+  width:15vw;
+  height:10vw;
+  margin-right: 50vw;
 }
 
+.notes{
+
+}
