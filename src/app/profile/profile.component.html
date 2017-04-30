@@ -3,14 +3,7 @@
     <div class="menu-form" style="left:0;">
       <button  [routerLink]="['/profil']"  class="downbtn" >Profil </button>
       <button   class="downbtn" >Espace de travail </button>
-        <div class="menu-content" >
-          <a [routerLink]="['/workspace']">Module</a>
-          <a [routerLink]="['/workspace']">Session</a>
-          <a [routerLink]="['/workspace']">Evaluation</a>
-          <a [routerLink]="['/workspace']">Liste des etudiant</a>
-          <a [routerLink]="['/workspace']">Notes</a>
-          <a [routerLink]="['/workspace']">Notifications</a>
-        </div>
+
     </div>
     <div class="menu-form" style="float:right;">
 
@@ -24,8 +17,8 @@
   <div class="content profil ">
     <div class="img">
       <img src="assets/avatar.svg" >
-      <label class="line">Nom </label>
-      <label class="line">Prénom</label>
+      <label class="line">{{profileService.profile.lastName }} </label>
+      <label class="line">{{profileService.profile.firstname }}</label>
     </div>
 
     <div class="notes" style="float:right;">
