@@ -12,6 +12,8 @@ import {MdInputModule} from '@angular/material';
 import {MdToolbarModule} from '@angular/material';
 import {MdIconModule} from '@angular/material';
 import {MdCardModule} from '@angular/material';
+import {MdDialogModule} from '@angular/material';
+import {MdSnackBarModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -55,6 +57,9 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
     MdToolbarModule,
     MdIconModule,
     MdCardModule,
+    MdDialogModule,
+    MdSnackBarModule,
+
 
   ],
   providers: [

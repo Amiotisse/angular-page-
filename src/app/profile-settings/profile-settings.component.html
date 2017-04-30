@@ -1,23 +1,5 @@
 <form>
-  <div>
-
-    <div class="menu-form" style="float:right;">
-
-      <md-toolbar class="toulbar">
-
-        <button md-button><md-icon>save</md-icon> Enregistrer</button>
-        <button md-button [mdMenuTriggerFor]="menu"><md-icon>settings</md-icon> Paramétre</button>
-        <md-menu #menu="mdMenu">
-          <button md-menu-item>Se déconnecter</button>
-        </md-menu>
-      </md-toolbar>
-
-    </div>
-    </div>
-
-
-
-<div class="content profil ">
+  <div class="content profil ">
 
   <div class="p-left">
     <div >
@@ -54,6 +36,11 @@
   <img md-card-image src="assets/professor.svg" >
   </md-card>
 
-</div>
+  </div>
+
+  <md-toolbar class="toulbar">
+    <button md-button (click)="onSave()"><md-icon>save</md-icon> Enregistrer</button>
+    <button md-button (click)="onCancel()"><md-icon>cancel</md-icon> Annuler</button>
+  </md-toolbar>
 
  </form>

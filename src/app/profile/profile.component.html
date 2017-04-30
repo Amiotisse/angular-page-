@@ -1,46 +1,15 @@
-<form>
-<div>
-    <div class="menu-form" style="left:0;">
-      <button  [routerLink]="['/profile']"  class="downbtn" >Profil </button>
-      <button   class="downbtn" >Espace de travail </button>
+<div class="menu-form" style="float:right;">
+<md-toolbar class="toulbar">
+  <button md-button><md-icon>save</md-icon> Enregistrer</button>
+  <button md-button [mdMenuTriggerFor]="menu"><md-icon>settings</md-icon> Paramétre </button>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item (click)="openSettings()" >Paramétre profil</button>
+    <button md-menu-item>Se déconnecter</button>
 
-    </div>
-    <div class="menu-form" style="float:right;">
-
-        <button [routerLink]="['/profile']" class="downbtn nom">{{profileService.profile.userName }} </button>
-      <div class="menu-content">
-          <a [routerLink]="['/profile-settings']">paramètres</a>
-          <a>Se deconecter</a>
-      </div>
-  </div>
+  </md-menu>
+</md-toolbar>
 </div>
-  <div class="content profil ">
-    <div class="img">
-      <img md-card-image src="assets/avatar.svg" >
-      <label class="line">{{profileService.profile.lastName }} </label>
-      <label class="line">{{profileService.profile.firstName }}</label>
-    </div>
 
-    <div class="notes" style="float:right;">
+<div class="content">
 
-        <div class="line">
-          <label>Rappel et Notes</label>
-        </div>
-<!--TODO Task list !! -->
-      <div class="profil inputs">
-        <input
-          type="text"
-          id="name"
-          class="form-control"
-          name="name"
-          ngModel
-          required
-        >
-
-      </div>
-<!--TODO Task calendar  !! -->
-    </div>
-
-  </div>
-</form>
-
+</div>

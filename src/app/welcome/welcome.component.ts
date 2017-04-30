@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProfileService} from "../profile.service";
+import {MdDialog} from "@angular/material";
+import {ProfileSettingsComponent} from "../profile-settings/profile-settings.component";
 
 @Component({
   selector: 'app-welcome',
@@ -12,5 +14,7 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
 
   }
+
+
 
 }
