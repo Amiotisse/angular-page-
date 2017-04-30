@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {UserRoleService} from "../user-role.service";
 import {NgForm, FormGroup, FormControl, Validators} from "@angular/forms";
+import {ProfileService} from "../profile.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +12,9 @@ import {NgForm, FormGroup, FormControl, Validators} from "@angular/forms";
 })
 export class SignupComponent implements OnInit {
 
-  constructor( public userRoleService: UserRoleService) { }
+  constructor( public userRoleService: UserRoleService ,
+               private profilService : ProfileService ,
+               private router: Router ) { }
   signupForm: FormGroup;
   usernameFormControl :FormControl;
   errors: any[];
@@ -34,17 +38,25 @@ export class SignupComponent implements OnInit {
     'password': new FormControl(null,Validators.required),
     'confirm_password': new FormControl(null,Validators.required),
   });
-    this.signupForm.valueChanges.subscribe(
-      (data)=>{
-       // console.log(this.signupForm)
-
-      }
-    )
-   // this.usernameFormControl
   }
   onSubmit(){
-   console.log(this.usernameFormControl)
-   //console.log(this.signupForm);
+    console.log(this.signupForm.value)
+   this.profilService.signup(
+     this.signupForm.value.username,
+     this.signupForm.value.name,
+     this.signupForm.value.email,
+     this.signupForm.value.firstname,
+     this.signupForm.value.etablish,
+     this.signupForm.value.rol_call.value,
+     this.signupForm.value.password,
+     ""
+   ).then(() => this.router.navigate(['/profile']))
+      .catch((error) => {
+        console.log(error);
+        this.errors.push(error);
+      });
   }
+
+
 }
 

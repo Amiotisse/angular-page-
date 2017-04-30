@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Headers, Http, Response} from "@angular/http";
 import 'rxjs/Rx';
 
-import {LoginErrors} from "./login-errors";
+import {LoginErrors} from "./Errors";
 import {Observable} from "rxjs";
 @Injectable()
 export class UserAuthService {
