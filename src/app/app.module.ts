@@ -43,7 +43,7 @@ import { AddModuleComponent } from './add-module/add-module.component';
     ProfileComponent,
     WorkspaceComponent,
     ProfileSettingsComponent,
-    AddModuleComponent
+    AddModuleComponent,
   ],
   imports: [
     BrowserModule,

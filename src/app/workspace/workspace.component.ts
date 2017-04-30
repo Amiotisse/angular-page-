@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ProfileService} from "../profile.service";
-import {MdDialog, MdSnackBar} from "@angular/material";
 import {AddModuleComponent} from "../add-module/add-module.component";
+import {MdDialog, MdSnackBar} from "@angular/material";
+
 
 @Component({
   selector: 'app-workspace',
@@ -11,12 +12,12 @@ import {AddModuleComponent} from "../add-module/add-module.component";
 export class WorkspaceComponent implements OnInit {
 
   constructor( public profileService : ProfileService ,
-               public dialog: MdDialog ,
+               public adddialog: MdDialog ,
                public snackBar: MdSnackBar ) { }
   ngOnInit() {
   }
   onAdd(){
-    let dialog = this.dialog.open(AddModuleComponent);
+    let dialog = this.adddialog.open(AddModuleComponent);
 
     /*dialog.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
