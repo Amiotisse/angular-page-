@@ -29,6 +29,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from "./profile.service";
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+import { AddModuleComponent } from './add-module/add-module.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
     ErrorDisplayerComponent,
     ProfileComponent,
     WorkspaceComponent,
-    ProfileSettingsComponent
+    ProfileSettingsComponent,
+    AddModuleComponent
   ],
   imports: [
     BrowserModule,

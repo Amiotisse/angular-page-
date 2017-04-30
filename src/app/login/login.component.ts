@@ -34,10 +34,10 @@ export class LoginComponent implements OnInit {
     console.log (this.password);*/
    this.errors = [] ;
    this.userAuthService
-     .login(this.username,this.password)
+     .login(this.username,this.password,this.userRoleService.user_roles_selected.value)
      .then( ()=> this.profileService.getProfile())
      .then( (profile) => console.log(profile))
-     .then(() => this.router.navigate(['/profile']))
+     .then(() => this.router.navigate(['/welcome']))
      .catch((error) => {
           console.log(error);
           this.errors.push(error);

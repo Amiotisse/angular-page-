@@ -3,7 +3,7 @@ export const LoginErrors = {
   "USER_NOT_FOUND" : {
     description : "Pseudo introuvable"
   },
-  "INVALIDE_PASSWORD" : {
+  "INVALID_PASSWORD" : {
     description : "Mot de Passe invalide "
   }
 };

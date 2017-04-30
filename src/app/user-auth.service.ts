@@ -11,11 +11,12 @@ export class UserAuthService {
     this.token = null;
   }
   token : string ;
-  login(username :string , password : string){
+  login(username :string , password : string , userType:string){
     let body ={
         app_name:  "ubsunu",
         user_name: username,
         password:  password,
+        userType:  userType,
     };
   return this.http.post("api/alphau/token",body)
     .map( (response : Response ) =>{
