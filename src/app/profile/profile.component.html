@@ -1,7 +1,7 @@
 <form>
 <div>
     <div class="menu-form" style="left:0;">
-      <button  [routerLink]="['/profil']"  class="downbtn" >Profil </button>
+      <button  [routerLink]="['/profile']"  class="downbtn" >Profil </button>
       <button   class="downbtn" >Espace de travail </button>
 
     </div>
@@ -16,7 +16,7 @@
 </div>
   <div class="content profil ">
     <div class="img">
-      <img src="assets/avatar.svg" >
+      <img md-card-image src="assets/avatar.svg" >
       <label class="line">{{profileService.profile.lastName }} </label>
       <label class="line">{{profileService.profile.firstName }}</label>
     </div>

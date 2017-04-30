@@ -43,11 +43,13 @@
              type="password"
              formControlName="password"
              placeholder="Mot de passe"
+             (change)="check_password()"
       />
       <input class="singup input line"
              type="password"
              placeholder="Confirmer Mot de passe"
              formControlName="confirm_password"
+             (change)="check_password()"
       />
     </div>
     <div class="singup holder ">
@@ -70,7 +72,9 @@
   </div>
   <footer class="singup footer">
     <div class="singup condition">
-      <input  type="checkbox"/>
+      <input  type="checkbox"
+              required
+      />
       <label>j'accepte les termes et conditions</label>
     </div>
    <div>

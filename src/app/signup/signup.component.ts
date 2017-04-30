@@ -38,6 +38,7 @@ export class SignupComponent implements OnInit {
     'password': new FormControl(null,Validators.required),
     'confirm_password': new FormControl(null,Validators.required),
   });
+
   }
   onSubmit(){
     console.log(this.signupForm.value)
@@ -56,7 +57,13 @@ export class SignupComponent implements OnInit {
         this.errors.push(error);
       });
   }
+  check_password(){
+    let result: boolean =
+    this.signupForm.value.password === this.signupForm.value.confirm_password ;
+    console.log(result);
+    return result;
 
+  }
 
 }
 

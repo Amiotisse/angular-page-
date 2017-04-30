@@ -1,72 +1,59 @@
 <form>
   <div>
-    <div class="menu-form" style="left:0;">
-      <button  [routerLink]="['/profil']"  class="downbtn" >Profil </button>
-      <button   class="downbtn" >Espace de travail </button>
-      <div class="menu-content" >
-        <a [routerLink]="['/workspace']">Module</a>
-        <a [routerLink]="['/workspace']">Session</a>
-        <a [routerLink]="['/workspace']">Evaluation</a>
-        <a [routerLink]="['/workspace']">Liste des etudiant</a>
-        <a [routerLink]="['/workspace']">Notes</a>
-        <a [routerLink]="['/workspace']">Notifications</a>
-      </div>
-    </div>
 
     <div class="menu-form" style="float:right;">
-      <!--img src="assets/professor.svg" -->
-      <button [routerLink]="['/profile']" class="downbtn nom">{{profileService.profile.userName }} </button>
-      <div class="menu-content">
-        <a [routerLink]="['/profile-settings']">paramètres</a>
-        <a>Se deconecter</a>
-      </div>
+
+      <md-toolbar class="toulbar">
+
+        <button md-button><md-icon>save</md-icon> Enregistrer</button>
+        <button md-button [mdMenuTriggerFor]="menu"><md-icon>settings</md-icon> Paramétre</button>
+        <md-menu #menu="mdMenu">
+          <button md-menu-item>Se déconnecter</button>
+        </md-menu>
+      </md-toolbar>
+
     </div>
+    </div>
+
+
+
 <div class="content profil ">
 
   <div class="p-left">
-    <div class="profil holder form">
-      <input class="profil input line"
-             type="text"
-             placeholder=" Nom "
-      />
+    <div >
+      <md-input-container class="profil holder form">
+        <input mdInput placeholder="Nom" >
+      </md-input-container>
     </div>
-    <div class="profil holder form">
-      <input class="profil input line"
-             type="text"
-             placeholder=" Prénom "
-      />
+    <div >
+      <md-input-container class="profil holder form">
+        <input mdInput placeholder="Prénom" >
+      </md-input-container>
     </div>
-    <div class="profil holder form">
-      <input class="profil input line"
-             type="date"
-             placeholder="Date de naissance"
-      />
+    <div >
+      <md-input-container class="profil holder form">
+      <input mdInput placeholder="Date"
+             type="date">
+    </md-input-container>
     </div>
-    <div class="profil holder form">
-      <input class="profil input line"
-             type="email"
-             placeholder="Email"
-      />
+    <div >
+      <md-input-container class="profil holder form">
+        <input mdInput placeholder="Email"
+               type="email">
+      </md-input-container>
     </div>
-    <div class="profil holder form">
-      <input class="profil input line"
-             type="text"
-             placeholder="Etabissement"
-      />
+    <div >
+      <md-input-container class="profil holder form">
+        <input mdInput placeholder="Etablissement"
+               type="text">
+      </md-input-container>
     </div>
-    <div class="profil holder form">
-    <textarea class="profil input area"
-              rows="10"
-              type="text"
-              placeholder="Sujet de recherche "
-    ></textarea>
-    </div>
-
-    <!--div class="card">
-      <input type="file"/>
-    </div-->
-
   </div>
+
+  <md-card class="card">
+  <img md-card-image src="assets/professor.svg" >
+  </md-card>
+
 </div>
-</div>
+
  </form>

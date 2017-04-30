@@ -4,6 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+import {MdTabsModule} from '@angular/material';
+import {MdMenuModule} from '@angular/material';
+import {MdInputModule} from '@angular/material';
+import {MdToolbarModule} from '@angular/material';
+import {MdIconModule} from '@angular/material';
+import {MdCardModule} from '@angular/material';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { routes } from "./app.route";
@@ -14,13 +23,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { UserRoleService } from "./user-role.service";
 import { UserAuthService } from "./user-auth.service";
 import { ErrorDisplayerComponent } from './error-displayer/error-displayer.component';
-
 import { ProfileComponent } from './profile/profile.component';
-
 import { ProfileService } from "./profile.service";
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
-
 
 @NgModule({
   declarations: [
@@ -41,6 +47,15 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
     FormsModule,
     HttpModule,
     routes,
+    BrowserAnimationsModule,
+    MdButtonModule, MdCheckboxModule,
+    MdTabsModule,
+    MdInputModule,
+    MdMenuModule,
+    MdToolbarModule,
+    MdIconModule,
+    MdCardModule,
+
   ],
   providers: [
     UserRoleService,
