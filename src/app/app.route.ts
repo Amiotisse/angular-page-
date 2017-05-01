@@ -9,6 +9,7 @@ import {ProfileComponent} from "./profile/profile.component";
 import {WorkspaceComponent} from "./workspace/workspace.component";
 import {ProfileSettingsComponent} from "./profile-settings/profile-settings.component";
 import {AddModuleComponent} from "./add-module/add-module.component";
+import {AuthGuardService} from "./auth-guard.service";
 
 const app_routes : Routes  =
   [
@@ -27,9 +28,11 @@ const app_routes : Routes  =
     },
     {
       path :'welcome',
-      component : WelcomeComponent
+      component : WelcomeComponent,
+      canActivate : [AuthGuardService],
+
     },
-    {
+    /*{
       path: 'profile',
       component: ProfileComponent
     },
@@ -44,11 +47,15 @@ const app_routes : Routes  =
     {
       path: 'workspace',
       component: WorkspaceComponent
-    },
+    },*/
     {
       path:'in-progress',
       component: NotImplYetComponent
-    }
+    },
+    {
+      path : '**' ,
+      redirectTo:'/',
+    },
   ];
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(app_routes);

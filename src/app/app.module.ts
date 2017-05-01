@@ -25,12 +25,14 @@ import { NotImplYetComponent } from './not-impl-yet/not-impl-yet.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { UserRoleService } from "./user-role.service";
 import { UserAuthService } from "./user-auth.service";
+import { DeleteModuleComponent } from './delete-module/delete-module.component';
 import { ErrorDisplayerComponent } from './error-displayer/error-displayer.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from "./profile.service";
-import { WorkspaceComponent } from './workspace/workspace.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
-import { DeleteModuleComponent } from './delete-module/delete-module.component';
+import { WorkspaceComponent } from './workspace/workspace.component';
+import {AuthGuardService} from "./auth-guard.service";
+
 
 @NgModule({
   declarations: [
@@ -72,7 +74,8 @@ import { DeleteModuleComponent } from './delete-module/delete-module.component';
   providers: [
     UserRoleService,
     UserAuthService,
-    ProfileService
+    ProfileService,
+    AuthGuardService
   ],
 
   bootstrap: [AppComponent ]
