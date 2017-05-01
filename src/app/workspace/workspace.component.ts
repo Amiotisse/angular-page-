@@ -19,11 +19,11 @@ export class WorkspaceComponent implements OnInit {
   onAdd(){
     let dialog = this.adddialog.open(AddModuleComponent);
 
-    /*dialog.afterClosed().subscribe(result => {
+    dialog.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
       if (result) {
         this.snackBar.open("Module Ajouter", "X", {duration : 1000});
       }
-    });*/
+    });
   }
 }

@@ -1,1 +1,46 @@
+<form>
 
+  <div class="content profil ">
+    <div> <h1> Ajout d'un Module </h1></div>
+    <div class="p-left">
+      <div >
+        <md-input-container class="profil holder form">
+          <input mdInput placeholder="Titre" >
+        </md-input-container>
+      </div>
+      <div >
+        <md-input-container class="profil holder form">
+          <input mdInput placeholder="Mot Clé" >
+        </md-input-container>
+      </div>
+      <div >
+        <md-input-container class="profil holder form">
+          <input mdInput placeholder="Description du Module"
+                 type="text">
+        </md-input-container>
+      </div>
+      <div >
+        <md-input-container class="profil holder form">
+          <input mdInput placeholder="Code"
+                 type="text">
+        </md-input-container>
+        <button md-button (click)="onGenerate()" class="buttun"><md-icon></md-icon>Generer</button>
+      </div>
+      <div >
+        <md-input-container class="profil holder form">
+          <input mdInput placeholder="Support de cours"
+                 type="link">
+        </md-input-container>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <md-toolbar class="toolbar">
+    <button md-button (click)="onSave()"><md-icon>save</md-icon> Enregistrer</button>
+    <button md-button (click)="onCancel()"><md-icon>cancel</md-icon> Annuler</button>
+  </md-toolbar>
+
+</form>

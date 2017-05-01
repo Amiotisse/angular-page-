@@ -1,4 +1,3 @@
-
 .content {
   background-color: #C7D6D5;
   height: 80vh;
@@ -7,4 +6,24 @@
   flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
+}
+
+.toolbar{
+  background-color:#2E4057 ;
+  color: #f0f3f5;
+}
+
+.p-left{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+
+}
+.buttun{
+  text-align: center;
+  background-color: #2E4057;
+  color: #f0f3f5;
+}
+h1{
+  color:#2E4057 ;
 }

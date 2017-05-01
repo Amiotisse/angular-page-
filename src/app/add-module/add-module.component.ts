@@ -8,7 +8,15 @@ import {MdDialogRef} from "@angular/material";
 })
 export class AddModuleComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog : MdDialogRef <AddModuleComponent>) { }
+  onSave(){
+    this.dialog.close(true);
+
+  }
+
+  onCancel(){
+    this.dialog.close(false);
+  }
 
   ngOnInit() {
   }
