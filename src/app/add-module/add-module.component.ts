@@ -17,6 +17,9 @@ export class AddModuleComponent implements OnInit {
   onCancel(){
     this.dialog.close(false);
   }
+  onGenerate(){
+  console.log('Generated');
+  }
 
   ngOnInit() {
   }

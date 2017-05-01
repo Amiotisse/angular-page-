@@ -51,7 +51,7 @@ export class SignupComponent implements OnInit {
      this.signupForm.value.rol_call.value,
      this.signupForm.value.password,
      ''
-   ).then(() => this.router.navigate(['/profile']))
+   ).then(() => this.router.navigate(['/welcome']))
       .catch((error) => {
         console.log(error);
         this.errors.push(error);

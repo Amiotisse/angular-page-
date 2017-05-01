@@ -5,7 +5,7 @@
 
          <md-toolbar class="toulbar">
            <button md-button><md-icon>edit</md-icon> Modifier</button>
-           <button md-button><md-icon>delete</md-icon> Supprimer</button>
+           <button md-button (click)="onDelete()"><md-icon>delete</md-icon> Supprimer</button>
            <button md-button (click)="onAdd()"><md-icon>add</md-icon> Ajouter</button>
            <button md-button [mdMenuTriggerFor]="menu"><md-icon>settings</md-icon> Paramètre</button>
            <md-menu #menu="mdMenu">

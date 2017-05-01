@@ -30,6 +30,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from "./profile.service";
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+import { DeleteModuleComponent } from './delete-module/delete-module.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
     WorkspaceComponent,
     ProfileSettingsComponent,
     AddModuleComponent,
+    DeleteModuleComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +67,7 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
   entryComponents: [
     ProfileSettingsComponent,
     AddModuleComponent,
+    DeleteModuleComponent,
   ],
   providers: [
     UserRoleService,

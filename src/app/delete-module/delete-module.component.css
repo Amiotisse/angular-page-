@@ -1,0 +1,24 @@
+.content {
+  background-color: #C7D6D5;
+  height: 40vh;
+  width: 40vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.toolbar{
+  background-color:#2E4057 ;
+  color: #f0f3f5;
+  align-items: center;
+}
+
+h1{
+  height: 12vh;
+  color:#2E4057 ;
+  text-align: center;
+}
+.h2{
+  font-size: 4vh;
+}
