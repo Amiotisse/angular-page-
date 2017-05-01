@@ -3,6 +3,8 @@ import {ProfileService} from "../profile.service";
 import {AddModuleComponent} from "../add-module/add-module.component";
 import {MdDialog, MdSnackBar} from "@angular/material";
 import {DeleteModuleComponent} from "../delete-module/delete-module.component";
+import {UserAuthService} from "../user-auth.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -14,7 +16,9 @@ export class WorkspaceComponent implements OnInit {
 
   constructor( public profileService : ProfileService ,
                public adddialog: MdDialog ,
-               public snackBar: MdSnackBar ) { }
+               public snackBar: MdSnackBar,
+               public userauth :UserAuthService,
+               public router : Router) { }
   ngOnInit() {
   }
   onAdd(){
@@ -23,7 +27,7 @@ export class WorkspaceComponent implements OnInit {
     dialog.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
       if (result) {
-        this.snackBar.open("Module Ajouter", "X", {duration : 1000});
+        this.snackBar.open("Module Ajouté", "X", {duration : 1000});
       }
     });
   }
@@ -33,9 +37,13 @@ export class WorkspaceComponent implements OnInit {
     deleete.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
       if (result) {
-        this.snackBar.open("Module Supprimer", "X", {duration : 1000});
+        this.snackBar.open("Module Supprimé", "X", {duration : 1000});
       }
     });
 
+  }
+  onlogout(){
+    this.userauth.disconnect();
+    this.router.navigate([""]);
   }
 }

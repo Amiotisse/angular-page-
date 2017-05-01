@@ -32,6 +32,7 @@ import { ProfileService } from "./profile.service";
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import {AuthGuardService} from "./auth-guard.service";
+import {PublicGuardService} from "./public-guard.service";
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import {AuthGuardService} from "./auth-guard.service";
     UserRoleService,
     UserAuthService,
     ProfileService,
-    AuthGuardService
+    AuthGuardService,
+    PublicGuardService,
   ],
 
   bootstrap: [AppComponent ]

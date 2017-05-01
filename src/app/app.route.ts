@@ -10,20 +10,24 @@ import {WorkspaceComponent} from "./workspace/workspace.component";
 import {ProfileSettingsComponent} from "./profile-settings/profile-settings.component";
 import {AddModuleComponent} from "./add-module/add-module.component";
 import {AuthGuardService} from "./auth-guard.service";
+import {PublicGuardService} from "./public-guard.service";
 
 const app_routes : Routes  =
   [
     {
       path : '' ,
-      component : HomeComponent
+      component : HomeComponent,
+      canActivate: [PublicGuardService],
     },
     {
       path : 'login' ,
-      component : LoginComponent
+      component : LoginComponent,
+      canActivate: [PublicGuardService],
     },
     {
       path : 'signup' ,
-      component : SignupComponent
+      component : SignupComponent,
+      canActivate: [PublicGuardService],
 
     },
     {
