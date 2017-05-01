@@ -9,8 +9,23 @@ export class UserAuthService {
 
   constructor( private http : Http ) {
     this.token = null;
+    this.getToken();
   }
-  token : string ;
+  private tokenKey = "ubsunuToken";
+
+  private token : string ;
+
+  private setToken(token :string){
+    this.token = token;
+    localStorage.setItem( this.tokenKey , this.token);
+  }
+
+  private getToken (){
+    if (this.token != null )return this.token;
+    this.token = localStorage.getItem(this.tokenKey)
+    return this.token;
+  }
+
   login(username :string , password : string , userType:string){
     let body ={
         app_name:  "ubsunu",
@@ -20,16 +35,20 @@ export class UserAuthService {
     };
   return this.http.post("api/alphau/token",body)
     .map( (response : Response ) =>{
-      this.token= response.text();
+      this.setToken (response.text());
     })
     .catch(
     (error : Response) => Observable.throw(LoginErrors [error.json().errorCode])
     ).toPromise();
   }
 
-  isLogedIn(): boolean { return ! (this.token == null) }
+  disconnect (){
+    this.token = null;
+    localStorage.removeItem(this.tokenKey);
+  }
+  isLogedIn(): boolean { return ! (this.getToken() == null) }
 
   appendAuthHeader(headers : Headers):void {
-    headers.append("Authorization", "Bearer "+ this.token );
+    headers.append("Authorization", "Bearer "+ this.getToken() );
   }
 }
