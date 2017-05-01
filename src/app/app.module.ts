@@ -16,8 +16,9 @@ import {MdDialogModule} from '@angular/material';
 import {MdSnackBarModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+import { AddModuleComponent } from './add-module/add-module.component';
 import { routes } from "./app.route";
+import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { NotImplYetComponent } from './not-impl-yet/not-impl-yet.component';
@@ -29,7 +30,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from "./profile.service";
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
-import { AddModuleComponent } from './add-module/add-module.component';
 
 @NgModule({
   declarations: [
@@ -61,8 +61,10 @@ import { AddModuleComponent } from './add-module/add-module.component';
     MdCardModule,
     MdDialogModule,
     MdSnackBarModule,
-
-
+  ],
+  entryComponents: [
+    ProfileSettingsComponent,
+    AddModuleComponent,
   ],
   providers: [
     UserRoleService,
