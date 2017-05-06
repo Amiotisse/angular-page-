@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MdButtonToggleChange} from "@angular/material";
+import {Router} from "@angular/router";
+import {UserAuthService} from "../user-auth.service";
+import {ProfileService} from "../profile.service";
 
 @Component({
   selector: 'app-marks',
@@ -8,7 +11,11 @@ import {MdButtonToggleChange} from "@angular/material";
 })
 export class MarksComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public profileService : ProfileService,
+    public userauth :UserAuthService,
+    public router : Router
+  ) { }
 
   ngOnInit() {
   }
@@ -19,4 +26,7 @@ export class MarksComponent implements OnInit {
     this.userauth.disconnect();
     this.router.navigate([""]);
   }
+
+
+
 }
