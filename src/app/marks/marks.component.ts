@@ -15,4 +15,8 @@ export class MarksComponent implements OnInit {
   onSelect(e:MdButtonToggleChange){
     console.log(e.value);
   }
+  onlogout(){
+    this.userauth.disconnect();
+    this.router.navigate([""]);
+  }
 }
