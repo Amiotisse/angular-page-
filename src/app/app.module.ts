@@ -14,6 +14,7 @@ import {MdIconModule} from '@angular/material';
 import {MdCardModule} from '@angular/material';
 import {MdDialogModule} from '@angular/material';
 import {MdSnackBarModule} from '@angular/material';
+import {MdButtonToggleModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AddModuleComponent } from './add-module/add-module.component';
@@ -33,6 +34,7 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
 import { WorkspaceComponent } from './workspace/workspace.component';
 import {AuthGuardService} from "./auth-guard.service";
 import {PublicGuardService} from "./public-guard.service";
+import { MarksComponent } from './marks/marks.component';
 
 
 @NgModule({
@@ -49,6 +51,7 @@ import {PublicGuardService} from "./public-guard.service";
     ProfileSettingsComponent,
     AddModuleComponent,
     DeleteModuleComponent,
+    MarksComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +69,7 @@ import {PublicGuardService} from "./public-guard.service";
     MdCardModule,
     MdDialogModule,
     MdSnackBarModule,
+    MdButtonToggleModule,
   ],
   entryComponents: [
     ProfileSettingsComponent,
