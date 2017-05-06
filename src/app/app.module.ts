@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -15,6 +15,7 @@ import {MdCardModule} from '@angular/material';
 import {MdDialogModule} from '@angular/material';
 import {MdSnackBarModule} from '@angular/material';
 import {MdButtonToggleModule} from '@angular/material';
+import {MdGridListModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AddModuleComponent } from './add-module/add-module.component';
@@ -35,6 +36,9 @@ import { WorkspaceComponent } from './workspace/workspace.component';
 import {AuthGuardService} from "./auth-guard.service";
 import {PublicGuardService} from "./public-guard.service";
 import { MarksComponent } from './marks/marks.component';
+import {MarksTableComponent} from "./marks/marks-table/marks-table.component";
+import {MarksRowDisplayComponent} from "./marks/marks-row-display/marks-row-display.component";
+import {MarksRowInputComponent} from "./marks/marks-row-input/marks-row-input.component";
 
 
 @NgModule({
@@ -52,6 +56,9 @@ import { MarksComponent } from './marks/marks.component';
     AddModuleComponent,
     DeleteModuleComponent,
     MarksComponent,
+    MarksTableComponent,
+    MarksRowDisplayComponent,
+    MarksRowInputComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +77,7 @@ import { MarksComponent } from './marks/marks.component';
     MdDialogModule,
     MdSnackBarModule,
     MdButtonToggleModule,
+    MdGridListModule,
   ],
   entryComponents: [
     ProfileSettingsComponent,
@@ -82,6 +90,9 @@ import { MarksComponent } from './marks/marks.component';
     ProfileService,
     AuthGuardService,
     PublicGuardService,
+  ],
+  schemas:[
+    CUSTOM_ELEMENTS_SCHEMA,
   ],
 
   bootstrap: [AppComponent ]

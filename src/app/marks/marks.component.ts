@@ -27,6 +27,4 @@ export class MarksComponent implements OnInit {
     this.router.navigate([""]);
   }
 
-
-
 }

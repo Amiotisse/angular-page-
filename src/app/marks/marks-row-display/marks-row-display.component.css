@@ -1,0 +1,27 @@
+.row-content{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 80vw;
+
+}
+.row-lable{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+.fname{
+  width: 25vw;
+  text-align: center;
+}
+.email{
+  width: 25vw;
+  text-align: center;
+}
+.name{
+  width: 15vw;
+}
+.marks{
+  width: 15vw;
+  text-align: end;
+}
