@@ -14,4 +14,13 @@
   background-color: #2E4057;
   color: #C7D6D5;
 }
+.table-body{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 63.5vh;
+  overflow-y: scroll;
+  width: 84vw;
 
+}

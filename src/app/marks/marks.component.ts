@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MdButtonToggleChange} from "@angular/material";
+import {MdButtonToggleChange, MdSnackBar} from "@angular/material";
 import {Router} from "@angular/router";
 import {UserAuthService} from "../user-auth.service";
 import {ProfileService} from "../profile.service";
@@ -17,7 +17,8 @@ export class MarksComponent implements OnInit {
   constructor(
     public userAuth :UserAuthService,
     public router : Router,
-    public marksService : MarksService
+    public marksService : MarksService,
+    public snackBar: MdSnackBar,
   ) { }
 
   ngOnInit() {
@@ -37,9 +38,15 @@ export class MarksComponent implements OnInit {
 
   }
   onPublish(){
-    this.marksService.publish(this.title, this.marksList);
-    this.title = "";
-    this.marksList = [];
+    this.marksService.publish(this.title, this.marksList).then(()=>{
+      this.title = "";
+      this.marksList = [];
+
+      this.snackBar.open("Liste Publié", "X", {duration : 3000});
+    })
+
+
+
   }
   addList(form: NgForm){
     const value =form.value;

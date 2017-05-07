@@ -8,7 +8,7 @@
             <md-input-container>
               <input mdInput
                      class="tall"
-                     placeholder="Titre"
+                     placeholder="Usto-MB Dept Informatique Année 2017 Licence 3 Section 1 Groupe 1"
                      [(ngModel)]="title"
                      required
               >
@@ -21,7 +21,7 @@
 
 
               <button md-button  (click)="onPublish()"
-                      [disabled] = "title == '' || title.length<=10"
+                      [disabled] = "title == '' || title.length<=5"
 
 
               ><md-icon>publish</md-icon> Publier</button>
