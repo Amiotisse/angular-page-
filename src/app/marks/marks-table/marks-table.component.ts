@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-marks-table',
   templateUrl: './marks-table.component.html',
-  styleUrls: ['./marks-table.component.css']
+  styleUrls: ['./marks-table.component.css','../marks-row-display/marks-row-display.component.css']
 })
 export class MarksTableComponent implements OnInit {
 
@@ -11,5 +11,5 @@ export class MarksTableComponent implements OnInit {
 
   ngOnInit() {
   }
-
+   @Input() marksList :{ student:{lastName:string,firstName :string ,email: string },value : number }[] ;
 }

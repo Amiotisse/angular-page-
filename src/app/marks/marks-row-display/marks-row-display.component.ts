@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-marks-row-display',
@@ -11,5 +11,5 @@ export class MarksRowDisplayComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  @Input() mark:{ student:{lastName:string,firstName :string ,email: string },value : number } ;
 }

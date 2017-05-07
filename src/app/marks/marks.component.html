@@ -1,4 +1,4 @@
-<form>
+
   <div>
 
     <div>
@@ -6,16 +6,22 @@
       <md-toolbar>
         <div class="toulbar">
           <div class="toolbar-left">
-            <md-button-toggle-group (change)="onSelect($event)" class="style">
-              <md-button-toggle value="liste"><md-icon>list</md-icon> Liste</md-button-toggle>
-              <md-button-toggle value="Evaluation"><md-icon>rate_review</md-icon> Evaluation</md-button-toggle>
-            </md-button-toggle-group>
+            <div class="inputTable">
+            <md-input-container>
+              <input mdInput
+                     class="tall"
+                     placeholder="Titre"
+                     [ngModel]
+              >
+            </md-input-container>
+
+            </div>
+
           </div>
           <div class="toolbar-right">
 
-              <button md-button disabled ><md-icon>edit</md-icon> Modifier</button>
-              <button md-button disabled ><md-icon>delete</md-icon> Supprimer</button>
-              <button md-button ><md-icon>add</md-icon> Ajouter</button>
+
+              <button md-button ><md-icon>save</md-icon> Enregistrer</button>
               <button md-button [mdMenuTriggerFor]="menu"><md-icon>settings</md-icon> Paramètre</button>
 
             <md-menu #menu="mdMenu">
@@ -24,12 +30,69 @@
           </div>
         </div>
       </md-toolbar>
+
+      <md-toolbar>
+        <form (ngSubmit)="addList(f)" #f="ngForm">
+        <div class="toulbar">
+          <div class="toolbar-left">
+
+            <div class="inputTable">
+              <md-input-container>
+                <input mdInput
+                       placeholder="Nom"
+                       name="lastName"
+                       ngModel
+                       required
+
+                >
+              </md-input-container>
+
+              <md-input-container>
+                <input mdInput placeholder="Prénom"
+                       name="firstName"
+                       ngModel
+
+                >
+              </md-input-container>
+
+              <md-input-container>
+                <input mdInput placeholder="Email"
+                       name="email"
+                       ngModel
+                       required
+
+                >
+              </md-input-container>
+              <md-input-container>
+                <input mdInput
+                       placeholder="Note"
+                       name="note"
+                       type="number"
+                       [pattern]="'^[0-9]+[0-9]*$'"
+                       ngModel
+                       required
+
+                >
+              </md-input-container>
+            </div>
+
+          </div>
+          <div class="toolbar-right">
+            <button md-button type="submit"
+                    [disabled]="!f.valid"
+           >
+              <md-icon>add</md-icon>Ajouter</button>
+          </div>
+
+        </div>
+      </form>
+      </md-toolbar>
+
     </div>
   </div>
   <div class="content profil ">
 
     <!-- TODO table -->
-    <app-marks-table></app-marks-table>
+    <app-marks-table [marksList]="marksList"></app-marks-table>
 
   </div>
-</form>

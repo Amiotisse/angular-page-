@@ -1,10 +1,10 @@
 .content {
   background-color: #19535f;
-  height: 80vh;
+  height: 70vh;
   width: 90vw;
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
 .toulbar{
@@ -26,6 +26,9 @@
 .style{
   font-size: 14px;
 }
-md-grid-tile {
-  background: lightblue;
+.inputTable{
+  font-size: 14px;
+}
+.tall{
+  width: 50.5vw;
 }

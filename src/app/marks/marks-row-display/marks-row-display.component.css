@@ -3,25 +3,26 @@
   flex-flow: row wrap;
   justify-content: space-between;
   width: 80vw;
+  padding: 10px;
+  background-color: #C7D6D5;
 
 }
 .row-lable{
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
+  color: #2E4057;
 }
 .fname{
   width: 25vw;
-  text-align: center;
+  text-align: start;
 }
 .email{
   width: 25vw;
-  text-align: center;
+  text-align: start;
 }
 .name{
   width: 15vw;
+  text-align:start;
 }
 .marks{
   width: 15vw;
-  text-align: end;
+  text-align: start;
 }

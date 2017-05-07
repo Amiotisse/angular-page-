@@ -3,12 +3,19 @@
   flex-flow: column wrap;
   justify-content: space-between;
   width: 80vw;
-  color: #C7D6D5;
+
 }
 .table-header{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   width: 80vw;
+  padding: 10px;
+  background-color: #2E4057;
+  color: #C7D6D5;
 }
+.inputTable{
+
+}
+
 
