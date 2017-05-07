@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {MdButtonToggleChange} from "@angular/material";
 import {Router} from "@angular/router";
 import {UserAuthService} from "../user-auth.service";
@@ -29,7 +29,9 @@ export class MarksComponent implements OnInit {
   }
 
 
-
+  onClear(){
+    this.addList.reset();
+  }
   addList(form: NgForm){
     const value =form.value;
     console.log(value);

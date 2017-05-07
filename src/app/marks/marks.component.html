@@ -79,9 +79,10 @@
           </div>
           <div class="toolbar-right">
             <button md-button type="submit"
-                    [disabled]="!f.valid"
-           >
+                    [disabled]="!f.valid">
               <md-icon>add</md-icon>Ajouter</button>
+            <button md-button type="button" (click)="onClear()">
+              <md-icon>clear</md-icon>Clear</button>
           </div>
 
         </div>
