@@ -29,23 +29,26 @@ export class MarksComponent implements OnInit {
   }
 
 
-  onClear(){
-    this.addList.reset();
+  onClear(form : NgForm){
+    form.reset();
+    console.log(form);
+
   }
   addList(form: NgForm){
     const value =form.value;
-    console.log(value);
+
     var
       mark:{ student:{lastName:string,firstName :string ,email: string },value : number } = {
-      student: {
-        lastName : value.lastName,
-        firstName : value.firstName,
-        email : value.email,
-      },
-      value : value.note
-    };
-  this.marksList.push(mark);
-
+        student: {
+          lastName : value.lastName,
+          firstName : value.firstName,
+          email : value.email,
+        },
+        value : value.note
+      };
+    this.marksList.push(mark);
+    form.reset();
+    console.log(form);
 
   }
 

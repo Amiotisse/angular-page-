@@ -1,9 +1,7 @@
 
   <div>
-
     <div>
-
-      <md-toolbar>
+      <md-toolbar class="color">
         <div class="toulbar">
           <div class="toolbar-left">
             <div class="inputTable">
@@ -31,7 +29,7 @@
         </div>
       </md-toolbar>
 
-      <md-toolbar>
+      <md-toolbar class="color">
         <form (ngSubmit)="addList(f)" #f="ngForm">
         <div class="toulbar">
           <div class="toolbar-left">
@@ -51,6 +49,7 @@
                 <input mdInput placeholder="Prénom"
                        name="firstName"
                        ngModel
+                       required
 
                 >
               </md-input-container>
@@ -60,6 +59,7 @@
                        name="email"
                        ngModel
                        required
+                       email
 
                 >
               </md-input-container>
@@ -68,10 +68,9 @@
                        placeholder="Note"
                        name="note"
                        type="number"
-                       [pattern]="'^[0-9]+[0-9]*$'"
+                       [pattern]="'^(?:[1-9]|0[1-9]|1[0-9]|20)$'"
                        ngModel
                        required
-
                 >
               </md-input-container>
             </div>
@@ -81,19 +80,19 @@
             <button md-button type="submit"
                     [disabled]="!f.valid">
               <md-icon>add</md-icon>Ajouter</button>
-            <button md-button type="button" (click)="onClear()">
+            <button md-button type="button" (click)="onClear(f)">
               <md-icon>clear</md-icon>Clear</button>
           </div>
 
         </div>
       </form>
       </md-toolbar>
-
     </div>
   </div>
+
   <div class="content profil ">
 
     <!-- TODO table -->
-    <app-marks-table [marksList]="marksList"></app-marks-table>
+    <app-marks-table [(marksList)]="marksList"></app-marks-table>
 
   </div>

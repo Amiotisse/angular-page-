@@ -1,4 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Mark} from "../../app.types";
 
 @Component({
   selector: 'app-marks-table',
@@ -6,10 +7,20 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./marks-table.component.css','../marks-row-display/marks-row-display.component.css']
 })
 export class MarksTableComponent implements OnInit {
-
-  constructor() { }
+  @Input() marksList : Mark [] ;
+  @Output() marksListChange : EventEmitter<Mark[]>;
+  constructor() {
+    this.marksListChange = new EventEmitter<Mark[]>();
+  }
 
   ngOnInit() {
   }
-   @Input() marksList :{ student:{lastName:string,firstName :string ,email: string },value : number }[] ;
+
+  onDelete(m : Mark ){
+
+    let index : number = this.marksList.indexOf(m);
+    this.marksList.splice(index,1);
+    this.marksListChange.emit(this.marksList);
+
+  }
 }

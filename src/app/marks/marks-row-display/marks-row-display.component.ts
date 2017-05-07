@@ -1,4 +1,5 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Mark} from "../../app.types";
 
 @Component({
   selector: 'app-marks-row-display',
@@ -6,10 +7,17 @@ import {Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./marks-row-display.component.css']
 })
 export class MarksRowDisplayComponent implements OnInit {
-
-  constructor() { }
+  @Input() mark: Mark ;
+  @Output() supp : EventEmitter<Mark>;
+  constructor() {
+    this.supp = new EventEmitter<Mark>();
+  }
 
   ngOnInit() {
   }
-  @Input() mark:{ student:{lastName:string,firstName :string ,email: string },value : number } ;
+
+  onDelete(){
+    this.supp.emit(this.mark);
+
+  }
 }

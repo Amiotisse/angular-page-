@@ -5,7 +5,8 @@
   width: 80vw;
   padding: 10px;
   background-color: #C7D6D5;
-
+  border-bottom: 1px solid #2E4057;
+  align-items: baseline;
 }
 .row-lable{
   color: #2E4057;
@@ -23,6 +24,10 @@
   text-align:start;
 }
 .marks{
-  width: 15vw;
+  width: 10vw;
+  text-align: start;
+}
+.action{
+  width: 5vw;
   text-align: start;
 }

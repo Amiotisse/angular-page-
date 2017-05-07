@@ -1,11 +1,12 @@
 <div class="table-content">
-    <div class="table-header">
-       <div class=" name"><b>Nom</b></div>
-       <div class=" fname"><b>Prénom</b></div>
-       <div class=" email"><b>Email</b></div>
-       <div class=" marks"><b>Note</b></div>
-    </div>
-      <div class="table-body">
-      <app-marks-row-display *ngFor="let m of marksList" [mark]="m"></app-marks-row-display>
-    </div>
+  <div class="table-header">
+    <div class=" name"><b>Nom</b></div>
+    <div class=" fname"><b>Prénom</b></div>
+    <div class=" email"><b>Email</b></div>
+    <div class=" marks"><b>Note</b></div>
+    <div class="action"></div>
+  </div>
+  <div class="table-body">
+    <app-marks-row-display *ngFor="let m of marksList" [mark]="m" (supp)="onDelete(m)"></app-marks-row-display>
+  </div>
 </div>
