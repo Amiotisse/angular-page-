@@ -11,6 +11,7 @@ import {ProfileSettingsComponent} from "./profile-settings/profile-settings.comp
 import {AddModuleComponent} from "./add-module/add-module.component";
 import {AuthGuardService} from "./auth-guard.service";
 import {PublicGuardService} from "./public-guard.service";
+import {MarksPublishComponent} from "./marks-publish/marks-publish.component";
 
 const app_routes : Routes  =
   [
@@ -36,6 +37,11 @@ const app_routes : Routes  =
       canActivate : [AuthGuardService],
 
     },
+    {
+      path :'marks/:title',
+      component : MarksPublishComponent,
+    },
+
     /*{
       path: 'profile',
       component: ProfileComponent
@@ -50,7 +56,7 @@ const app_routes : Routes  =
     },
     {
       path: 'workspace',
-      component: WorkspaceComponent
+      component: WorkspaceComponent,
     },*/
     {
       path:'in-progress',

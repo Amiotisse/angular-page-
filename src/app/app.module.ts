@@ -39,6 +39,8 @@ import { MarksComponent } from './marks/marks.component';
 import {MarksTableComponent} from "./marks/marks-table/marks-table.component";
 import {MarksRowDisplayComponent} from "./marks/marks-row-display/marks-row-display.component";
 import {MarksRowInputComponent} from "./marks/marks-row-input/marks-row-input.component";
+import { MarksPublishComponent } from './marks-publish/marks-publish.component';
+import {MarksService} from "./marks.service";
 
 
 @NgModule({
@@ -59,6 +61,7 @@ import {MarksRowInputComponent} from "./marks/marks-row-input/marks-row-input.co
     MarksTableComponent,
     MarksRowDisplayComponent,
     MarksRowInputComponent,
+    MarksPublishComponent,
   ],
   imports: [
     BrowserModule,
@@ -90,6 +93,7 @@ import {MarksRowInputComponent} from "./marks/marks-row-input/marks-row-input.co
     ProfileService,
     AuthGuardService,
     PublicGuardService,
+    MarksService,
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA,

@@ -9,7 +9,8 @@
               <input mdInput
                      class="tall"
                      placeholder="Titre"
-                     [ngModel]
+                     [(ngModel)]="title"
+                     required
               >
             </md-input-container>
 
@@ -19,7 +20,11 @@
           <div class="toolbar-right">
 
 
-              <button md-button ><md-icon>save</md-icon> Enregistrer</button>
+              <button md-button  (click)="onPublish()"
+                      [disabled] = "title == '' || title.length<=10"
+
+
+              ><md-icon>publish</md-icon> Publier</button>
               <button md-button [mdMenuTriggerFor]="menu"><md-icon>settings</md-icon> Paramètre</button>
 
             <md-menu #menu="mdMenu">
@@ -93,6 +98,6 @@
   <div class="content profil ">
 
     <!-- TODO table -->
-    <app-marks-table [(marksList)]="marksList"></app-marks-table>
+    <app-marks-table [(marksList)]="marksList" [showAction]="true"></app-marks-table>
 
   </div>

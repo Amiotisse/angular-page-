@@ -4,6 +4,8 @@ import {Router} from "@angular/router";
 import {UserAuthService} from "../user-auth.service";
 import {ProfileService} from "../profile.service";
 import {NgForm} from "@angular/forms";
+import {Mark} from "../app.types";
+import {MarksService} from "../marks.service";
 
 @Component({
   selector: 'app-marks',
@@ -13,9 +15,9 @@ import {NgForm} from "@angular/forms";
 export class MarksComponent implements OnInit {
 
   constructor(
-    public profileService : ProfileService,
-    public userauth :UserAuthService,
-    public router : Router
+    public userAuth :UserAuthService,
+    public router : Router,
+    public marksService : MarksService
   ) { }
 
   ngOnInit() {
@@ -24,7 +26,7 @@ export class MarksComponent implements OnInit {
     console.log(e.value);
   }
   onlogout(){
-    this.userauth.disconnect();
+    this.userAuth.disconnect();
     this.router.navigate([""]);
   }
 
@@ -34,11 +36,16 @@ export class MarksComponent implements OnInit {
     console.log(form);
 
   }
+  onPublish(){
+    this.marksService.publish(this.title, this.marksList);
+    this.title = "";
+    this.marksList = [];
+  }
   addList(form: NgForm){
     const value =form.value;
 
     var
-      mark:{ student:{lastName:string,firstName :string ,email: string },value : number } = {
+      mark: Mark = {
         student: {
           lastName : value.lastName,
           firstName : value.firstName,
@@ -51,25 +58,7 @@ export class MarksComponent implements OnInit {
     console.log(form);
 
   }
+  title : string = "";
+  marksList : Mark[] = [];
 
-  marksList :{ student:{lastName:string,firstName :string ,email: string },value : number }[] =
-    [
-      {
-        student: {
-          lastName : 'Himri',
-          firstName : 'Nabil',
-          email : 'Himri.nabil@gmail.com',
-        },
-        value : 20
-      },
-      {
-        student: {
-          lastName : 'Himri',
-          firstName : 'Amina',
-          email : 'Himri.amina@gmail.com',
-        },
-        value : 19
-      }
-
-    ] ;
 }

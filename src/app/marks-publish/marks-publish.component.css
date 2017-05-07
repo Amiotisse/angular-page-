@@ -1,0 +1,9 @@
+.content {
+  background-color: #C7D6D5;
+  height: 70vh;
+  width: 90vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}

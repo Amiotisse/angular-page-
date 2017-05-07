@@ -8,6 +8,11 @@
     "target": "http://localhost:8082",
     "secure":false,
     "logLevel":"info"
+  },
+  "/api/marks/*" :{
+   "target":"http://localhost:8086",
+    "secure": false,
+    "logLevel": "info"
   }
 
 }

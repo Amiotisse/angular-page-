@@ -3,6 +3,6 @@
   <div class="row-lable fname">{{mark.student.firstName}}</div>
   <div class="row-lable email">{{mark.student.email}}</div>
   <div class="row-lable marks">{{mark.value}}</div>
-  <div class="row-lable action"><button md-button (click)="onDelete()"><md-icon>delete</md-icon></button></div>
+  <div class="row-lable action" *ngIf="showAction"><button md-button (click)="onDelete()"><md-icon>delete</md-icon></button></div>
 </div>
 

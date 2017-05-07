@@ -4,9 +4,9 @@
     <div class=" fname"><b>Prénom</b></div>
     <div class=" email"><b>Email</b></div>
     <div class=" marks"><b>Note</b></div>
-    <div class="action"></div>
+    <div class="action" *ngIf="showAction"></div>
   </div>
   <div class="table-body">
-    <app-marks-row-display *ngFor="let m of marksList" [mark]="m" (supp)="onDelete(m)"></app-marks-row-display>
+    <app-marks-row-display *ngFor="let m of marksList" [showAction]="showAction" [mark]="m" (supp)="onDelete(m)"></app-marks-row-display>
   </div>
 </div>

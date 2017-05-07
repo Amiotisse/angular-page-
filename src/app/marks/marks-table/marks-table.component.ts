@@ -8,6 +8,7 @@ import {Mark} from "../../app.types";
 })
 export class MarksTableComponent implements OnInit {
   @Input() marksList : Mark [] ;
+  @Input() showAction: boolean = false ;
   @Output() marksListChange : EventEmitter<Mark[]>;
   constructor() {
     this.marksListChange = new EventEmitter<Mark[]>();

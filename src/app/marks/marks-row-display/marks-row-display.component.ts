@@ -8,6 +8,7 @@ import {Mark} from "../../app.types";
 })
 export class MarksRowDisplayComponent implements OnInit {
   @Input() mark: Mark ;
+  @Input() showAction: boolean = false;
   @Output() supp : EventEmitter<Mark>;
   constructor() {
     this.supp = new EventEmitter<Mark>();
