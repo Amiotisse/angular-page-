@@ -12,7 +12,7 @@
   "/api/marks/*" :{
    "target":"http://localhost:8086",
     "secure": false,
-    "logLevel": "info"
+    "logLevel": "debug"
   }
 
 }

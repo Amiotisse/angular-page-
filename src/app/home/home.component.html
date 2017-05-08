@@ -24,9 +24,17 @@
       <i>Trouver ce que vous cherchez, taper un code !</i><br><br>
     </div>
     <div class="home search-bar">
-      <form method="get" action="/search" id="search" >
-        <input class="s" name="q" type="text" size="40" placeholder="Recherche..." (keyup.enter)="onReserch()" />
-      </form>
+      <div id="search" >
+        <input class="s"
+               name="q"
+               type="text"
+               size="40"
+               placeholder="Recherche..."
+               [(ngModel)]="researchBar.research"
+               (keyup.enter)="onReserch()"
+
+        />
+      </div>
     </div>
   </div>
 </div>

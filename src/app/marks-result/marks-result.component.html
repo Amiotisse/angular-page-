@@ -4,15 +4,18 @@
 
       <div class="search-bar">
 
-        <form method="get" action="/search" id="search">
-          <div>
+
+          <div id="search">
             <input class="s"
                    name="q"
                    type="text"
                    size="40"
-                   placeholder="Recherche...">
+                   placeholder="Recherche..."
+                   [(ngModel)]="researchBar.research"
+                   (change)="onResearch()"
+            >
           </div>
-        </form>
+
 
       </div>
     </div>
@@ -20,6 +23,11 @@
 
   <div class="style">
     Nom de la liste
+  </div>
+  <div class="title_container">
+    <div classe="title_item"
+         *ngFor="let markList  of markListList" (click)="onSelectList(markList)" >{{markList}}
+       </div>
   </div>
 </div>
 

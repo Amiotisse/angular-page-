@@ -44,6 +44,7 @@ import {MarksRowInputComponent} from "./marks/marks-row-input/marks-row-input.co
 import { MarksPublishComponent } from './marks-publish/marks-publish.component';
 import {MarksService} from "./marks.service";
 import { MarksResultComponent } from './marks-result/marks-result.component';
+import {ResearchBarServiceService} from "./research-bar-service.service";
 
 
 @NgModule({
@@ -101,6 +102,7 @@ import { MarksResultComponent } from './marks-result/marks-result.component';
     AuthGuardService,
     PublicGuardService,
     MarksService,
+    ResearchBarServiceService,
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA,

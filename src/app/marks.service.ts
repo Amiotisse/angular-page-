@@ -23,4 +23,9 @@ export class MarksService {
     return this.http.post("/api/marks/teacher/marks?title="+title ,markList, { headers : headers })
       .toPromise();
   }
+
+  search(recherche : string ) {
+  return this.http.get("/api/marks/marks/list/search?title="+recherche)
+    .map((res : Response)=> res.json()).toPromise();
+  }
 }
