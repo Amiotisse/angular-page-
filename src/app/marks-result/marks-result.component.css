@@ -1,0 +1,58 @@
+.list-contente{
+  background-color: #C7D6D5;
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.search{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#search input[type="text"] {
+  width: 40vw;
+  box-sizing: border-box;
+  border: 0.02vw solid #f0f3f5;
+  font:bold 2.3vh myFont;
+  color: #f0f3f5;
+
+  float:left;
+  background: #203549 url("../../assets/ic_search_white_18px.svg") no-repeat 0.4vw 0.8vh;
+  background-size: 3vh auto;
+  padding: 1vh 1vw 1vh 2vw;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+
+#search input[type="text"]:focus {
+  width: 80vw;
+}
+.toulbar{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.toolbar-left{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.toolbar-right{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+.style{
+  font-size: 24px;
+  color: #203549;
+  font-family: Univers;
+
+}

@@ -1,12 +1,14 @@
 
 .content{
-  background-color: #19535f;
+  background-color: #9DA2A9;
   height: 75vh;
   width: 70vw;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
+  border-radius: 1vh;
+
 }
 
 img{
@@ -36,12 +38,12 @@ img{
 }
 .action-select {
   background-color: #f0f3f5;
-  border-radius: 2vw;
+  /*border-radius: 2vw;
   font-size: 2.3vh;
-  text-align: center;
+  text-align: center;*/
   height: 5vh;
   width: 10vw;
-  color: #7b2d26;
+  color: #2E4057;
   padding-left: 1.2vh;
   overflow: hidden;
   border: 0.01vw  solid #d7c9aa;
@@ -76,7 +78,7 @@ img{
   box-sizing: border-box;
   border: 0.02vw solid #f0f3f5;
   font:bold 2.3vh myFont;
-  color: #0b7a75;
+  color: #2E4057;
   border-radius: 2vw ;
   float:left;
   background: #f0f3f5 url("../../assets/search.svg") no-repeat 0.4vw 0.8vh;
@@ -90,23 +92,24 @@ img{
   width: 50vw;
 }
 .btn{
-  border-radius: 2vw ;
+  /*border-radius: 2vw ;
   padding-left: 1.2vh;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 2.5vh ;
-  height: 5vh;
-  width: 10vw;
   border : none;
+  height: 5vh;*/
+  width: 10vw;
+
 }
 .login{
-  background-color: #0b7a75;
+  background-color: #2E4057;
   color: #f0f3f5;
 }
 .singup{
   background-color: #f0f3f5;
-  color: #7b2d26;
+  color: #2E4057;
 }
 button span {
   cursor: pointer;

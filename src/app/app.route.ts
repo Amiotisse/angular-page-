@@ -12,6 +12,7 @@ import {AddModuleComponent} from "./add-module/add-module.component";
 import {AuthGuardService} from "./auth-guard.service";
 import {PublicGuardService} from "./public-guard.service";
 import {MarksPublishComponent} from "./marks-publish/marks-publish.component";
+import {MarksResultComponent} from "./marks-result/marks-result.component";
 
 const app_routes : Routes  =
   [
@@ -40,6 +41,10 @@ const app_routes : Routes  =
     {
       path :'marks/:title',
       component : MarksPublishComponent,
+    },
+    {
+      path : 'list',
+      component : MarksResultComponent
     },
 
     /*{

@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+import {MdButtonModule, MdCheckboxModule, MdTooltipModule} from '@angular/material';
 import {MdTabsModule} from '@angular/material';
 import {MdMenuModule} from '@angular/material';
 import {MdInputModule} from '@angular/material';
@@ -16,6 +16,8 @@ import {MdDialogModule} from '@angular/material';
 import {MdSnackBarModule} from '@angular/material';
 import {MdButtonToggleModule} from '@angular/material';
 import {MdGridListModule} from '@angular/material';
+import {MdSelectModule} from '@angular/material';
+
 
 import { AppComponent } from './app.component';
 import { AddModuleComponent } from './add-module/add-module.component';
@@ -41,6 +43,7 @@ import {MarksRowDisplayComponent} from "./marks/marks-row-display/marks-row-disp
 import {MarksRowInputComponent} from "./marks/marks-row-input/marks-row-input.component";
 import { MarksPublishComponent } from './marks-publish/marks-publish.component';
 import {MarksService} from "./marks.service";
+import { MarksResultComponent } from './marks-result/marks-result.component';
 
 
 @NgModule({
@@ -62,6 +65,7 @@ import {MarksService} from "./marks.service";
     MarksRowDisplayComponent,
     MarksRowInputComponent,
     MarksPublishComponent,
+    MarksResultComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +74,7 @@ import {MarksService} from "./marks.service";
     HttpModule,
     routes,
     BrowserAnimationsModule,
-    MdButtonModule, MdCheckboxModule,
+    MdButtonModule,
     MdTabsModule,
     MdInputModule,
     MdMenuModule,
@@ -81,6 +85,9 @@ import {MarksService} from "./marks.service";
     MdSnackBarModule,
     MdButtonToggleModule,
     MdGridListModule,
+    MdTooltipModule,
+    MdSelectModule,
+    MdCheckboxModule,
   ],
   entryComponents: [
     ProfileSettingsComponent,

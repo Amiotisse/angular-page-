@@ -5,7 +5,7 @@
   align-items: center;
 }
 .content{
-  background-color: #19535f;
+  background-color: #9DA2A9;
   height: 70vh;
   width: 50vw;
   display: flex;
@@ -47,14 +47,14 @@
 
   }
 .input {
-  text-align: left;
+ /* text-align: left;
   font-size: 2.5vh;
   background-color: #f0f3f5;
-  border-radius: 0.5vh;
-  color: #7b2d26;
+  border-radius: 0.5vh;*/
+  color: #2E4057;
   border: none;
 }
-::-webkit-input-placeholder {  color:#7b2d26 ;
+::-webkit-input-placeholder {  color:#2E4057 ;
 }
 .line{
   width: 20vw;
@@ -64,7 +64,7 @@
 }
 
 .btn{
-  border-radius: 2vw ;
+  /*border-radius: 2vw ;
   padding-left: 1.2vh;
   text-align: center;
   text-decoration: none;
@@ -72,15 +72,15 @@
   font-size: 2.5vh ;
   height: 5vh;
   width: 10vw;
-  border : none;
-  background-color: #0b7a75;
+  border : none;*/
+  background-color: #2E4057;
   color: #f0f3f5;
   margin-left: 10vw;
 
 
 }
 .condition{
-  color: #d7c9aa;
+  color: #2E4057;
   font-size: 2.5vh ;
   width: 20vw;
   height: 4vh;
@@ -112,9 +112,9 @@
   text-align: center;
 
   font-size: 2.5vh;
-  background-color: #f0f3f5;
+  background-color: #C7D6D5;
   border-radius: 0.5vh;
-  color : #7b2d26;
+  color : #2E4057;
   width: 15vw;
   height: 5.5vh;
   padding: 0.5vh;

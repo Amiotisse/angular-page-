@@ -37,6 +37,7 @@ export class SignupComponent implements OnInit {
     'rol_call': new FormControl('teacher',Validators.required),
     'password': new FormControl(null,Validators.required),
     'confirm_password': new FormControl(null,Validators.required),
+    'checked_box': new FormControl(null,Validators.required)
   });
 
   }
@@ -62,6 +63,13 @@ export class SignupComponent implements OnInit {
     this.signupForm.value.password === this.signupForm.value.confirm_password ;
     console.log(result);
     return result;
+
+  }
+  agreed(){
+    let checked : boolean =
+      this.signupForm.value.checked_box ;
+    console.log("khosha tkoun true ", checked);
+    return checked;
 
   }
 

@@ -9,16 +9,14 @@
       </div>
       <span>  </span>
       <div >
-        <select [(ngModel)]="userRoleService.user_roles_selected"  class="home action-select ">
-          <option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role">{{user_role.display}}</option>
-
-
-        </select>
+        <md-select [(ngModel)]="userRoleService.user_roles_selected"  class="home action-select ">
+          <md-option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role">{{user_role.display}}</md-option>
+        </md-select>
       </div>
     </div>
     <div class="home action-group l2 action">
-      <button class="btn login text-font-family" [routerLink]="['/login']"><span>Se connecter</span></button>
-      <button class="btn singup text-font-family" [routerLink]="['/signup']"><span>S'inscrire</span></button>
+      <button md-button class="btn login text-font-family" [routerLink]="['/login']"><span>Se connecter</span></button>
+      <button md-button class="btn singup text-font-family" [routerLink]="['/signup']"><span>S'inscrire</span></button>
     </div>
   </div>
   <div class="home search">
@@ -26,8 +24,8 @@
       <i>Trouver ce que vous cherchez, taper un code !</i><br><br>
     </div>
     <div class="home search-bar">
-      <form method="get" action="/search" id="search">
-        <input class="s" name="q" type="text" size="40" placeholder="Recherche..." />
+      <form method="get" action="/search" id="search" >
+        <input class="s" name="q" type="text" size="40" placeholder="Recherche..." (keyup.enter)="onReserch()" />
       </form>
     </div>
   </div>

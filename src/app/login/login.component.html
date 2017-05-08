@@ -9,20 +9,26 @@
     <div class="login form">
       <div class=" login holder ">
        <span class=" login role-call "> Vous êtes : </span>
-        <select [(ngModel)]="userRoleService.user_roles_selected" class="login input role-select ">
+        <select  [(ngModel)]="userRoleService.user_roles_selected" class="login input role-select ">
           <option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role" align="center">{{user_role.display}}</option>
         </select>
       </div>
       <div class=" login holder">
-      <input [(ngModel)]="username" class="login input line mail " type="text" placeholder="Pseudo" (keypress)="key($event)"/>
+        <md-input-container>
+          <input  mdInput [(ngModel)]="username" type="text" placeholder="Pseudo" (keypress)="key($event)"/>
+        </md-input-container>
+
+
        </div>
       <div class="login holder">
-      <input [(ngModel)]="password" class="login input line mdp " type="password" placeholder="Mot de passe" (keypress)="key($event)"/>
+        <md-input-container>
+      <input mdInput [(ngModel)]="password"  type="password" placeholder="Mot de passe" (keypress)="key($event)"/>
+        </md-input-container>
       </div>
 
     </div>
     <div >
-      <button class="login btn " (click)="login()"  autofocus ><span>Se connecter</span></button>
+      <button md-button class="login btn " (click)="login()"  autofocus ><span>Se connecter</span></button>
     </div>
   </div>
 

@@ -9,55 +9,91 @@
   <div class="signup form" >
 
     <div class="singup holder">
-      <input class="singup input line"
-             type="text" placeholder="Pseudo"
-             formControlName="username"
-             name="username"
-      />
+      <md-input-container>
+        <input  mdInput
+                class="singup input line"
+                type="text" placeholder="Pseudo"
+                formControlName="username"
+                name="username"
+                required
+        />
+      </md-input-container>
+
       <!--span
         *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched" class="help-block">
         Entrer votre Pseodo S'il vous plait
       </span-->
-      <input class="singup input line"
-             type="text"
-             placeholder="Nom"
-             formControlName="name"
-             name="name"
-      />
+
+      <md-input-container>
+        <input  mdInput
+                class="singup input line"
+                type="text"
+                placeholder="Nom"
+                formControlName="name"
+                name="name"
+                required
+        />
+      </md-input-container>
+
     </div>
     <div class="singup holder">
-      <input class="singup input line"
-             type="text"
-             placeholder="Email"
-             formControlName="email"
-             name="email"
-      />
-      <input class="singup input line"
-             type="text"
-             placeholder="Prénom"
-             formControlName="firstname"
-      />
+      <md-input-container>
+        <input  mdInput
+                class="singup input line"
+                type="text"
+                placeholder="Email"
+                formControlName="email"
+                name="email"
+                required
+        />
+      </md-input-container>
+      <md-input-container>
+        <input  mdInput
+                class="singup input line"
+                type="text"
+                placeholder="Prénom"
+                formControlName="firstname"
+                required
+        />
+      </md-input-container>
+
     </div>
     <div class="singup holder">
-      <input class="singup input line"
-             type="password"
-             formControlName="password"
-             placeholder="Mot de passe"
-             (change)="check_password()"
-      />
-      <input class="singup input line"
-             type="password"
-             placeholder="Confirmer Mot de passe"
-             formControlName="confirm_password"
-             (change)="check_password()"
-      />
+      <md-input-container>
+        <input  mdInput
+                class="singup input line"
+                type="password"
+                formControlName="password"
+                placeholder="Mot de passe"
+                (change)="check_password()"
+                required
+        />
+      </md-input-container>
+
+      <md-input-container>
+        <input  mdInput
+                class="singup input line"
+                type="password"
+                placeholder="Confirmer Mot de passe"
+                formControlName="confirm_password"
+                (change)="check_password()"
+                required
+        />
+      </md-input-container>
+
     </div>
     <div class="singup holder ">
-      <input class="singup input line"
-             type="text"
-             formControlName="etablish"
-             placeholder=" Etablissement "
-      />
+
+      <md-input-container>
+        <input  mdInput
+                class="singup input line"
+                type="text"
+                formControlName="etablish"
+                placeholder=" Etablissement "
+        />
+      </md-input-container>
+
+
       <span class=" signup role-call "> Vous êtes : </span>
       <select [(ngModel)]="userRoleService.user_roles_selected"
               class="login input role-select "
@@ -72,13 +108,15 @@
   </div>
   <footer class="singup footer">
     <div class="singup condition">
-      <input  type="checkbox"
-              required
-      />
-      <label>j'accepte les termes et conditions</label>
+      <md-checkbox  formControlName="checked_box" >J'accepte les conditions</md-checkbox>
     </div>
    <div>
-     <button class="singup btn " type="submit"  > <span>Crée un compte</span></button>
+     <button  md-button
+              class="singup btn "
+              type="submit"
+              [disabled]="!signupForm.valid || !check_password() || !agreed()"
+     >
+       Crée un compte</button>
    </div>
     <div class="singup cancel">
       <a class="singup footer-text" [routerLink]="['/']"> Annuler </a>
