@@ -22,12 +22,12 @@
   </md-toolbar>
 
   <div class="style">
-    Nom de la liste
+    <b>Nom de la liste</b>
   </div>
   <div class="title_container">
-    <div classe="title_item"
+    <div class="title_item"
          *ngFor="let markList  of markListList" (click)="onSelectList(markList)" >{{markList}}
-       </div>
+    </div>
   </div>
 </div>
 
