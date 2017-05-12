@@ -54,8 +54,8 @@
   color: #2E4057;
   border: none;
 }
-::-webkit-input-placeholder {  color:#2E4057 ;
-}
+/*::-webkit-input-placeholder {  color:#2E4057 ;
+}*/
 .line{
   width: 20vw;
   height: 5vh;

@@ -1,0 +1,28 @@
+.content {
+  background-color: #C7D6D5;
+  height: 70vh;
+  width: 90vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.toulbar{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.color{
+  background-color: #d7c9aa;
+}
+.toolbar-left{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.toolbar-right{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}

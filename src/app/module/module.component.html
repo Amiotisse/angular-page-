@@ -1,0 +1,19 @@
+<div>
+  <md-toolbar class="color">
+    <div class="toulbar">
+      <div class="toolbar-left">
+        <button md-button (click)="onAdd()" ><md-icon>add</md-icon> Ajouter un module</button>
+      </div>
+      <div class="toolbar-right">
+
+
+        <button md-button  (click)="onlogout()" ><md-icon>log_out</md-icon> Se déconnecter </button>
+
+      </div>
+    </div>
+  </md-toolbar>
+</div>
+<div class="module content">
+  <app-module-table></app-module-table>
+
+</div>

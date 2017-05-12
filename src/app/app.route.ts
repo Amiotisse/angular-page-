@@ -13,6 +13,7 @@ import {AuthGuardService} from "./auth-guard.service";
 import {PublicGuardService} from "./public-guard.service";
 import {MarksPublishComponent} from "./marks-publish/marks-publish.component";
 import {MarksResultComponent} from "./marks-result/marks-result.component";
+import {ModuleComponent} from "./module/module.component";
 
 const app_routes : Routes  =
   [
@@ -45,6 +46,11 @@ const app_routes : Routes  =
     {
       path : 'list',
       component : MarksResultComponent
+    },
+    {
+      path : 'module',
+      component : ModuleComponent,
+      canActivate : [AuthGuardService],
     },
 
     /*{

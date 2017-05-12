@@ -45,6 +45,9 @@ import { MarksPublishComponent } from './marks-publish/marks-publish.component';
 import {MarksService} from "./marks.service";
 import { MarksResultComponent } from './marks-result/marks-result.component';
 import {ResearchBarServiceService} from "./research-bar-service.service";
+import { ModuleComponent } from './module/module.component';
+import { ModuleTableComponent } from './module/module-table/module-table.component';
+import { ModuleRowDisplayComponent } from './module/module-row-display/module-row-display.component';
 
 
 @NgModule({
@@ -67,6 +70,9 @@ import {ResearchBarServiceService} from "./research-bar-service.service";
     MarksRowInputComponent,
     MarksPublishComponent,
     MarksResultComponent,
+    ModuleComponent,
+    ModuleTableComponent,
+    ModuleRowDisplayComponent,
   ],
   imports: [
     BrowserModule,

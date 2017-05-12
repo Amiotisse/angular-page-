@@ -1,0 +1,26 @@
+.table-content{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 80vw;
+
+}
+.table-header{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 80vw;
+  padding: 10px;
+  background-color: #2E4057;
+  color: #C7D6D5;
+}
+.table-body{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 63.5vh;
+  overflow-y: scroll;
+  width: 84vw;
+
+}
