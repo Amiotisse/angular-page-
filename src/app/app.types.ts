@@ -14,3 +14,10 @@ export type MarkList = {
   ownerUserId : string,
   marks : Mark[]
 };
+export  type Module ={
+  title : string,
+  word : string,
+  desc : string,
+  code : string,
+  support : string
+}

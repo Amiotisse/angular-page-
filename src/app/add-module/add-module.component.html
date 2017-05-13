@@ -1,46 +1,68 @@
-<form>
+
 
   <div class="content profil ">
     <div> <h1> Ajout d'un Module </h1></div>
+
     <div class="p-left">
+      <form (ngSubmit)="addList(f)" #f="ngForm" >
+
       <div >
         <md-input-container class="profil holder form">
-          <input mdInput placeholder="Titre" >
+          <input mdInput
+                 placeholder="Titre"
+
+                 required
+          >
         </md-input-container>
       </div>
       <div >
         <md-input-container class="profil holder form">
-          <input mdInput placeholder="Mot Clé" >
+          <input mdInput
+                 placeholder="Mot Clé"
+
+          >
         </md-input-container>
       </div>
       <div >
         <md-input-container class="profil holder form">
-          <input mdInput placeholder="Description du Module"
-                 type="text">
+          <input mdInput
+                 placeholder="Description du Module"
+                 type="text"
+
+          >
         </md-input-container>
       </div>
       <div >
         <md-input-container class="profil holder form">
           <input mdInput placeholder="Code"
-                 type="text">
+                 type="text"
+
+          >
         </md-input-container>
         <button md-button (click)="onGenerate()" class="buttun"><md-icon>compare_arrows</md-icon>Generer</button>
       </div>
       <div >
         <md-input-container class="profil holder form">
           <input mdInput placeholder="Support de cours"
-                 type="link">
+                 type="link"
+
+          >
         </md-input-container>
       </div>
+
+</form>
     </div>
-
-
 
   </div>
 
   <md-toolbar class="toolbar">
-    <button md-button (click)="onSave()"><md-icon>save</md-icon> Enregistrer</button>
+    <button md-button
+            (click)="onSave()"
+            type="submit"
+            [disabled]="!f.valid"
+    ><md-icon>save</md-icon> Enregistrer</button>
+
     <button md-button (click)="onCancel()"><md-icon>cancel</md-icon> Annuler</button>
   </md-toolbar>
 
-</form>
+

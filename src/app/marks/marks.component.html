@@ -35,7 +35,7 @@
       </md-toolbar>
 
       <md-toolbar class="color">
-        <form (ngSubmit)="addList(f)" #f="ngForm">
+        <form (ngSubmit)="addModule(f)" #f="ngForm">
         <div class="toulbar">
           <div class="toolbar-left">
 
@@ -82,7 +82,8 @@
 
           </div>
           <div class="toolbar-right">
-            <button md-button type="submit"
+            <button md-button
+                    type="submit"
                     [disabled]="!f.valid">
               <md-icon>add</md-icon>Ajouter</button>
             <button md-button type="button" (click)="onClear(f)">
