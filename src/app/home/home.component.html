@@ -9,9 +9,9 @@
       </div>
       <span>  </span>
       <div >
-        <md-select [(ngModel)]="userRoleService.user_roles_selected"  class="home action-select ">
-          <md-option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role">{{user_role.display}}</md-option>
-        </md-select>
+        <select [(ngModel)]="userRoleService.user_roles_selected"  class="home action-select ">
+          <option *ngFor="let user_role of userRoleService.user_roles" [ngValue]="user_role">{{user_role.display}}</option>
+        </select>
       </div>
     </div>
     <div class="home action-group l2 action">
