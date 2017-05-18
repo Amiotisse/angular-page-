@@ -14,6 +14,7 @@ import {PublicGuardService} from "./public-guard.service";
 import {MarksPublishComponent} from "./marks-publish/marks-publish.component";
 import {MarksResultComponent} from "./marks-result/marks-result.component";
 import {ModuleComponent} from "./module/module.component";
+import {MarksComponent} from "./marks/marks.component";
 
 const app_routes : Routes  =
   [
@@ -51,6 +52,11 @@ const app_routes : Routes  =
       path : 'module',
       component : ModuleComponent,
       canActivate : [AuthGuardService],
+    },
+    {
+      path :'mark',
+      component : MarksComponent,
+      canActivate: [AuthGuardService],
     },
 
     /*{
