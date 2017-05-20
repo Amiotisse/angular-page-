@@ -4,7 +4,7 @@
   color: #203549;
 }*/
 .content {
-  background-color: #19535f;
+  background-color: #C7D6D5;
   height: 80vh;
   width: 90vw;
   display: flex;
@@ -12,8 +12,11 @@
   justify-content: space-around;
   align-items: center;
 }
-
-
+.text-show{
+  color: #2E4057;
+  font-size: 26px;
+  border-bottom: solid 1px #0b7a75;
+}
 
 
 .example-card {

@@ -17,6 +17,7 @@ import {MdSnackBarModule} from '@angular/material';
 import {MdButtonToggleModule} from '@angular/material';
 import {MdGridListModule} from '@angular/material';
 import {MdSelectModule} from '@angular/material';
+import {MdProgressBarModule} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -95,6 +96,8 @@ import { ModuleRowDisplayComponent } from './module/module-row-display/module-ro
     MdTooltipModule,
     MdSelectModule,
     MdCheckboxModule,
+    MdProgressBarModule,
+
   ],
   entryComponents: [
     ProfileSettingsComponent,

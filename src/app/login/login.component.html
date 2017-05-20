@@ -1,5 +1,8 @@
 <app-error-displayer [errors]="errors"></app-error-displayer>
 
+<div class=" login bar-progress" *ngIf="inProgress">
+  <md-progress-bar mode="indeterminate"></md-progress-bar>
+</div>
 <div class="login content">
   <div class="login title ">
     <div>Se Connecter</div>

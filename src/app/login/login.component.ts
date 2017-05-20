@@ -10,7 +10,7 @@ import {ProfileService} from "../profile.service";
   styleUrls: ['login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  public inProgress : boolean = false ;
   constructor(
     public userRoleService: UserRoleService ,
     private userAuthService: UserAuthService,
@@ -30,19 +30,23 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-   /* console.log (this.username);
-    console.log (this.password);*/
-   this.errors = [] ;
-   this.userAuthService
-     .login(this.username,this.password,this.userRoleService.user_roles_selected.value)
-     .then( ()=> this.profileService.getProfile())
-     .then( (profile) => console.log(profile))
-     .then(() => this.router.navigate(['/welcome']))
-     .catch((error) => {
-          console.log(error);
-          this.errors.push(error);
-     })
-   ;
+    /* console.log (this.username);
+     console.log (this.password);*/
+    this.inProgress = true;
+    this.errors = [] ;
+    this.userAuthService
+      .login(this.username,this.password,this.userRoleService.user_roles_selected.value)
+      .then( ()=> {
+        this.inProgress = false;
+        return this.profileService.getProfile();
+      })
+      .then( (profile) => console.log(profile))
+      .then(() => this.router.navigate(['/welcome']))
+      .catch((error) => {
+        console.log(error);
+        this.errors.push(error);
+      })
+    ;
   }
 
 }
