@@ -24,7 +24,7 @@ export class MarksResultComponent implements OnInit {
       .then((newMarkListList )=>{this.markListList = newMarkListList});
   }
   onSelectList(listTitle : string ){
-    this.router.navigate(['marks',listTitle]);
+    this.router.navigate(['list',listTitle]);
   }
 
 }

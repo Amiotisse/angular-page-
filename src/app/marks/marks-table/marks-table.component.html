@@ -7,6 +7,13 @@
     <div class="action" *ngIf="showAction"></div>
   </div>
   <div class="table-body">
-    <app-marks-row-display *ngFor="let m of marksList" [showAction]="showAction" [mark]="m" (supp)="onDelete(m)"></app-marks-row-display>
+    <app-marks-row-display *ngFor="let m of marksList ; let i = index"
+                           [showAction]="showAction"
+                           [index]="i"
+                           [editNote]="editNote"
+                           [mark]="m"
+                           (supp)="onDelete(m)"
+                           (change)="update($event)"
+    ></app-marks-row-display>
   </div>
 </div>

@@ -49,6 +49,10 @@ import {ResearchBarServiceService} from "./research-bar-service.service";
 import { ModuleComponent } from './module/module.component';
 import { ModuleTableComponent } from './module/module-table/module-table.component';
 import { ModuleRowDisplayComponent } from './module/module-row-display/module-row-display.component';
+import {StudentService} from "./student.service";
+import { StudentListComponent } from './student-list/student-list.component';
+import { StudentListAddComponent } from './student-list-add/student-list-add.component';
+
 
 
 @NgModule({
@@ -74,6 +78,8 @@ import { ModuleRowDisplayComponent } from './module/module-row-display/module-ro
     ModuleComponent,
     ModuleTableComponent,
     ModuleRowDisplayComponent,
+    StudentListComponent,
+    StudentListAddComponent,
   ],
   imports: [
     BrowserModule,
@@ -112,6 +118,7 @@ import { ModuleRowDisplayComponent } from './module/module-row-display/module-ro
     PublicGuardService,
     MarksService,
     ResearchBarServiceService,
+    StudentService,
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA,

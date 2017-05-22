@@ -2,7 +2,18 @@
   <div class="row-lable name">{{mark.student.lastName}}</div>
   <div class="row-lable fname">{{mark.student.firstName}}</div>
   <div class="row-lable email">{{mark.student.email}}</div>
-  <div class="row-lable marks">{{mark.value}}</div>
+  <div class="row-lable marks" *ngIf="!editNote">{{mark.value}}</div>
+  <div class="row-lable marks" *ngIf="editNote">
+    <md-input-container>
+      <input mdInput
+           placeholder="Note"
+           type="number"
+           [pattern]="'^(?:[0-9]|0[1-9]|1[0-9]|20)$'"
+           [(ngModel)]="mark.value"
+           (change)="onChange()"
+      >
+    </md-input-container>
+  </div>
   <div class="row-lable action" *ngIf="showAction"><button md-button (click)="onDelete()"><md-icon>delete</md-icon></button></div>
 </div>
 

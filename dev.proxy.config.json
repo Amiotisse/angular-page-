@@ -9,8 +9,8 @@
     "secure":false,
     "logLevel":"info"
   },
-  "/api/marks/*" :{
-   "target":"http://localhost:8086",
+  "/api/list/*" :{
+    "target":"http://localhost:8086",
     "secure": false,
     "logLevel": "debug"
   }

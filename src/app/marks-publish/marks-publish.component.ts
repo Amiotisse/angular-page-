@@ -13,7 +13,7 @@ export class MarksPublishComponent implements OnInit,OnDestroy {
   markList : MarkList = {
     title : '',
     ownerUserId :'',
-    marks : []
+    list : []
   };
   markListSubscription : Subscription;
   constructor( private marksService : MarksService, private route : ActivatedRoute) { }

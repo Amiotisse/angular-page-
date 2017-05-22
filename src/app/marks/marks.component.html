@@ -4,9 +4,6 @@
     <md-toolbar class="color">
       <div class="toulbar">
         <div class="toolbar-left">
-          <div class="toolbar-return">
-            <button md-menu-item [routerLink]="['/welcome']" ><md-icon>arrow_back</md-icon> Retour </button>
-          </div>
           <div class="inputTable">
 
             <md-input-container>
@@ -17,6 +14,9 @@
                      required
               >
             </md-input-container>
+            <md-select placeholder="Liste des Etudiant" (change)="getStudent($event)">
+              <md-option *ngFor="let title of studentListTitles" [value]="title">{{ title }}</md-option>
+            </md-select>
 
           </div>
 
@@ -37,72 +37,10 @@
         </div>
       </div>
     </md-toolbar>
-
-    <md-toolbar class="color">
-      <form (ngSubmit)="addList(f)" #f="ngForm">
-        <div class="toulbar">
-          <div class="toolbar-left">
-
-            <div class="inputTable">
-              <md-input-container>
-                <input mdInput
-                       placeholder="Nom"
-                       name="lastName"
-                       ngModel
-                       required
-
-                >
-              </md-input-container>
-
-              <md-input-container>
-                <input mdInput placeholder="Prénom"
-                       name="firstName"
-                       ngModel
-                       required
-
-                >
-              </md-input-container>
-
-              <md-input-container>
-                <input mdInput placeholder="Email"
-                       name="email"
-                       ngModel
-                       required
-                       email
-
-                >
-              </md-input-container>
-              <md-input-container>
-                <input mdInput
-                       placeholder="Note"
-                       name="note"
-                       type="number"
-                       [pattern]="'^(?:[0-9]|0[1-9]|1[0-9]|20)$'"
-                       ngModel
-                       required
-                >
-              </md-input-container>
-            </div>
-
-          </div>
-          <div class="toolbar-right">
-            <button md-button
-                    type="submit"
-                    [disabled]="!f.valid">
-              <md-icon>add</md-icon>Ajouter</button>
-            <button md-button type="button" (click)="onClear(f)">
-              <md-icon>clear</md-icon>Clear</button>
-          </div>
-
-        </div>
-      </form>
-    </md-toolbar>
   </div>
 </div>
 
-<div class="content profil ">
-
-  <!-- TODO table -->
-  <app-marks-table [(marksList)]="marksList" [showAction]="true"></app-marks-table>
+<div class="content">
+  <app-marks-table [(marksList)]="marksList" [showAction]="true" [editNote]="true" ></app-marks-table>
 
 </div>

@@ -1,0 +1,37 @@
+
+<div>
+  <div>
+    <md-toolbar class="color">
+      <div class="toulbar">
+        <div class="toolbar-left">
+          <button md-button [routerLink]="['/studentListAdd']"
+          ><md-icon>add</md-icon> Ajouter </button>
+        </div>
+        <div class="toolbar-right">
+
+          <button md-button [mdMenuTriggerFor]="menu"><md-icon>settings</md-icon> Paramètre</button>
+
+          <md-menu #menu="mdMenu">
+            <button md-menu-item [routerLink]="['/welcome']" ><md-icon>arrow_back</md-icon> Retour </button>
+            <button md-menu-item (click)="onlogout()"><md-icon>exit_to_app</md-icon>Se déconnecter</button>
+          </md-menu>
+        </div>
+      </div>
+    </md-toolbar>
+
+
+  </div>
+</div>
+
+<div class="content">
+  <div class="toolbar" *ngFor="let title of listsTitles">
+    <div class="toolbar-left">
+    {{title}}
+    </div>
+    <div class="toolbar-right">
+
+      <button md-menu-item ><md-icon>publish</md-icon>publish</button>
+      <button md-menu-item ><md-icon>visibility</md-icon>consulter</button>
+    </div>
+  </div>
+</div>

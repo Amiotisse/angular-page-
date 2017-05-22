@@ -8,10 +8,18 @@ import {Mark} from "../../app.types";
 })
 export class MarksRowDisplayComponent implements OnInit {
   @Input() mark: Mark ;
+  @Input() index : number ;
   @Input() showAction: boolean = false;
+  @Input() editNote: boolean;
   @Output() supp : EventEmitter<Mark>;
+  @Output() change : EventEmitter<{index:number , mark :Mark}>;
   constructor() {
     this.supp = new EventEmitter<Mark>();
+    this.change = new EventEmitter<{index:number , mark :Mark}>();
+  }
+
+  onChange(){
+    this.change.emit({index : this.index , mark :this.mark});
   }
 
   ngOnInit() {
@@ -19,6 +27,5 @@ export class MarksRowDisplayComponent implements OnInit {
 
   onDelete(){
     this.supp.emit(this.mark);
-
   }
 }
