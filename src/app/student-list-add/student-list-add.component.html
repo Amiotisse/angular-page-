@@ -1,3 +1,93 @@
-<p>
-  student-list-add works!
-</p>
+<div>
+  <div>
+    <md-toolbar class="color">
+      <div class="toulbar">
+        <div class="toolbar-left">
+
+          <div class="inputTable">
+
+            <md-input-container>
+              <input mdInput
+                     class="tall"
+                     placeholder="Titre de la liste "
+                     [(ngModel)]="title"
+                     required
+              >
+            </md-input-container>
+
+          </div>
+
+        </div>
+        <div class="toolbar-right">
+          <button md-button (click)="onSave()" ><md-icon>save</md-icon> Enregistrer </button>
+          <button md-button [mdMenuTriggerFor]="menu"><md-icon>settings</md-icon> Paramètre</button>
+
+          <md-menu #menu="mdMenu">
+            <button md-menu-item [routerLink]="['/studentList']" ><md-icon>arrow_back</md-icon> Retour </button>
+            <button md-menu-item (click)="onlogout()"><md-icon>exit_to_app</md-icon>Se déconnecter</button>
+          </md-menu>
+        </div>
+      </div>
+    </md-toolbar>
+
+    <md-toolbar class="color">
+      <form (ngSubmit)="addList(f)" #f="ngForm">
+        <div class="toulbar">
+          <div class="toolbar-left">
+
+            <div class="inputTable">
+              <md-input-container>
+                <input mdInput
+                       placeholder="Nom"
+                       name="lastName"
+                       ngModel
+                       required
+
+                >
+              </md-input-container>
+
+              <md-input-container>
+                <input mdInput placeholder="Prénom"
+                       name="firstName"
+                       ngModel
+                       required
+
+                >
+              </md-input-container>
+
+              <md-input-container>
+                <input mdInput placeholder="Email"
+                       name="email"
+                       ngModel
+                       required
+                       email
+
+                >
+              </md-input-container>
+
+            </div>
+
+          </div>
+          <div class="toolbar-right">
+            <button md-button
+                    type="submit"
+                    [disabled]="!f.valid">
+              <md-icon>add</md-icon>Ajouter Etudiant</button>
+
+
+          </div>
+
+        </div>
+      </form>
+    </md-toolbar>
+  </div>
+</div>
+
+<div class="content profil ">
+
+  <!-- TODO table -->
+<app-student-table [(studentList)]="studentList" > </app-student-table>
+
+</div>
+
+

@@ -41,7 +41,6 @@ import {PublicGuardService} from "./public-guard.service";
 import { MarksComponent } from './marks/marks.component';
 import {MarksTableComponent} from "./marks/marks-table/marks-table.component";
 import {MarksRowDisplayComponent} from "./marks/marks-row-display/marks-row-display.component";
-import {MarksRowInputComponent} from "./marks/marks-row-input/marks-row-input.component";
 import { MarksPublishComponent } from './marks-publish/marks-publish.component';
 import {MarksService} from "./marks.service";
 import { MarksResultComponent } from './marks-result/marks-result.component';
@@ -52,6 +51,8 @@ import { ModuleRowDisplayComponent } from './module/module-row-display/module-ro
 import {StudentService} from "./student.service";
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentListAddComponent } from './student-list-add/student-list-add.component';
+import { StudentlistRowDisplayComponent } from './student-list-add/studentlist-row-display/studentlist-row-display.component';
+import { StudentTableComponent } from './student-list-add/student-table/student-table.component';
 
 
 
@@ -72,7 +73,6 @@ import { StudentListAddComponent } from './student-list-add/student-list-add.com
     MarksComponent,
     MarksTableComponent,
     MarksRowDisplayComponent,
-    MarksRowInputComponent,
     MarksPublishComponent,
     MarksResultComponent,
     ModuleComponent,
@@ -80,6 +80,8 @@ import { StudentListAddComponent } from './student-list-add/student-list-add.com
     ModuleRowDisplayComponent,
     StudentListComponent,
     StudentListAddComponent,
+    StudentlistRowDisplayComponent,
+    StudentTableComponent,
   ],
   imports: [
     BrowserModule,

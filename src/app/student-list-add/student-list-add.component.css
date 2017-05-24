@@ -1,0 +1,42 @@
+.content {
+  background-color: #C7D6D5;
+  height: 70vh;
+  width: 90vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.toulbar{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.toolbar-return{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.color{
+  background-color: #C7D6D5;
+}
+.toolbar-left{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.toolbar-right{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+.style{
+  font-size: 14px;
+}
+.inputTable{
+  font-size: 14px;
+}
+.tall{
+  width: 50.5vw;
+}

@@ -25,7 +25,7 @@ export class SignupComponent implements OnInit {
       [
         Validators.required,
         Validators.minLength(5),
-        Validators.maxLength(10)
+        Validators.maxLength(15)
       ]
     );
   this.signupForm= new FormGroup({

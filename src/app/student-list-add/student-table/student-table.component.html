@@ -1,0 +1,11 @@
+<div class="table-content">
+ <div>
+
+  </div>
+  <!-- TODO table -->
+<app-studentlist-row-display *ngFor="let s of studentList "
+                             [student]="s"
+                             (supp)="onDelete(s)"
+
+></app-studentlist-row-display>
+</div>
