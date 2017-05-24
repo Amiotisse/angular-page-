@@ -27,7 +27,7 @@ export class StudentService {
   postList(title : string , studentList: Student[]){
     let headers : Headers = new Headers();
     this.userAuthService.appendAuthHeader(headers);
-    return this.http.post("/api/list/teacher/list?title="+title ,studentList, { headers : headers })
+    return this.http.post("/api/list/teacher/student?title="+title ,studentList, { headers : headers })
       .toPromise();
   }
 
