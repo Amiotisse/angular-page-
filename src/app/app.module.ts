@@ -53,6 +53,8 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { StudentListAddComponent } from './student-list-add/student-list-add.component';
 import { StudentlistRowDisplayComponent } from './student-list-add/studentlist-row-display/studentlist-row-display.component';
 import { StudentTableComponent } from './student-list-add/student-table/student-table.component';
+import { MarksListComponent } from './marks-list/marks-list.component';
+import { MarksComposeComponent } from './marks-compose/marks-compose.component';
 
 
 
@@ -82,6 +84,8 @@ import { StudentTableComponent } from './student-list-add/student-table/student-
     StudentListAddComponent,
     StudentlistRowDisplayComponent,
     StudentTableComponent,
+    MarksListComponent,
+    MarksComposeComponent,
   ],
   imports: [
     BrowserModule,

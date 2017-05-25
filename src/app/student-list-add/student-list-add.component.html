@@ -14,12 +14,10 @@
                      required
               >
             </md-input-container>
-
           </div>
-
         </div>
         <div class="toolbar-right">
-          <button md-button (click)="onSave()" ><md-icon>save</md-icon> Enregistrer </button>
+          <button md-button (click)="onSave()"   [disabled]="studentList.length <= 0 || title.length <= 4" ><md-icon>save</md-icon> Enregistrer </button>
           <button md-button [mdMenuTriggerFor]="menu"><md-icon>settings</md-icon> Paramètre</button>
 
           <md-menu #menu="mdMenu">

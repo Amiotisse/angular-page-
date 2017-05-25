@@ -1,9 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MdButtonToggleChange, MdSelectChange, MdSnackBar} from "@angular/material";
-import {Router} from "@angular/router";
+import {Router, ActivatedRoute} from "@angular/router";
 import {UserAuthService} from "../user-auth.service";
-import {ProfileService} from "../profile.service";
-import {NgForm} from "@angular/forms";
+
 import {Mark, StudentList} from "../app.types";
 import {MarksService} from "../marks.service";
 import {StudentService} from "../student.service";
@@ -21,11 +20,16 @@ export class MarksComponent implements OnInit {
     public studentService : StudentService,
     public marksService : MarksService,
     public snackBar: MdSnackBar,
+    public route : ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.studentService.getListTitles()
-      .then((titles : string[])=> this.studentListTitles = titles)
+      .then((titles : string[])=> this.studentListTitles = titles);
+    let titleFromRoute : string = this.route.snapshot.params['title'];
+    if ( titleFromRoute ) {
+      this.getStudentReq( titleFromRoute );
+    }
   }
   onSelect(e:MdButtonToggleChange){
     console.log(e.value);
@@ -39,14 +43,8 @@ export class MarksComponent implements OnInit {
   studentListTitles : string[];
   marksList : Mark[] = [];
 
-  /*
-  onClear(form : NgForm){
-    form.reset();
-
-  }*/
-
-  getStudent (event : MdSelectChange) {
-    this.studentService.getList(event.value)
+  getStudentReq( title : string  ){
+    this.studentService.getList(title)
       .then( ( students :StudentList)=> {
         this.marksList = [];
         for (let student of students.list ){
@@ -55,7 +53,11 @@ export class MarksComponent implements OnInit {
             value : 0
           });
         }
-      })
+      });
+  }
+
+  getStudent (event : MdSelectChange) {
+    this.getStudentReq(event.value)
   }
   onPublish(){
     this.marksService.publish(this.title, this.marksList).then(()=>{

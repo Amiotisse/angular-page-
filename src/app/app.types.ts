@@ -24,7 +24,10 @@ export type MarkList = {
   list : Mark[]
 };
 
-
+export type TitleCoef = {
+  markListTitle : string,
+  coef : number
+}
 
 export  type Module ={
   title : string,

@@ -17,6 +17,8 @@ import {ModuleComponent} from "./module/module.component";
 import {MarksComponent} from "./marks/marks.component";
 import {StudentListComponent} from "./student-list/student-list.component";
 import {StudentListAddComponent} from "./student-list-add/student-list-add.component";
+import {MarksListComponent} from "./marks-list/marks-list.component";
+import {MarksComposeComponent} from "./marks-compose/marks-compose.component";
 
 const app_routes : Routes  =
   [
@@ -61,8 +63,23 @@ const app_routes : Routes  =
       canActivate: [AuthGuardService],
     },
     {
+      path :'mark/:title',
+      component : MarksComponent,
+      canActivate: [AuthGuardService],
+    },
+    {
       path :'studentList',
       component : StudentListComponent,
+      canActivate: [AuthGuardService],
+    },
+    {
+      path :'markList',
+      component : MarksListComponent,
+      canActivate: [AuthGuardService],
+    },
+    {
+      path :'markCompose',
+      component : MarksComposeComponent,
       canActivate: [AuthGuardService],
     },
     {
