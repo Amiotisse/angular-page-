@@ -3,7 +3,7 @@ import {MarksService} from "../marks.service";
 import {UserAuthService} from "../user-auth.service";
 import {Router} from "@angular/router";
 import {TitleCoef} from "../app.types";
-import {NgForm} from "@angular/forms";
+
 
 @Component({
   selector: 'app-marks-compose',
@@ -28,15 +28,21 @@ export class MarksComposeComponent implements OnInit {
       .then((listsTitles : string[] ) => this.markListTitles = listsTitles);
   }
 
-  addList(f: NgForm){
-    const value =f.value;
+  titleSelected : string ;
+  coef : number ;
+
+  addList(){
     let titleCoef : TitleCoef = {
-        markListTitle : value.title,
-        coef : value.coef
+        markListTitle : this.titleSelected,
+        coef : this.coef
       };
     this.compo.push(titleCoef);
-    f.reset();
     console.log(this.compo);
+  }
+
+  publish (){
+    this.service.publishCompsition(this.title , this.compo)
+      .then( () => this.router.navigate(["/markList"]))
   }
   onlogout(){
     this.userAuth.disconnect();

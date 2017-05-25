@@ -30,15 +30,22 @@
           <div class="toolbar-left">
 
             <div class="inputTable">
-              <md-select placeholder="Liste des notes" (change)="getStudent($event)">
+              <md-select placeholder="Liste des notes" [(ngModel)]="titleSelected">
                 <md-option *ngFor="let title of markListTitles" [value]="title">{{ title }}</md-option>
               </md-select>
-
+              <md-input-container>
+                <input mdInput
+                       placeholder="Note"
+                       type="number"
+                       [(ngModel)]="coef"
+                       (change)="onChange()"
+                >
+              </md-input-container>
             </div>
 
           </div>
           <div class="toolbar-right">
-            <button md-button (click)="">
+            <button md-button (click)="addList()">
               <md-icon>add</md-icon>Ajouter la list</button>
           </div>
 
