@@ -1,3 +1,6 @@
+<h1>
+  Calcule de moyenne
+</h1>
 <div>
   <div>
     <md-toolbar class="color">
@@ -16,6 +19,7 @@
           </div>
         </div>
         <div class="toolbar-right">
+          <button md-button (click)=" publish()" ><md-icon>publish</md-icon> Publier</button>
           <button md-button [mdMenuTriggerFor]="menu"><md-icon>settings</md-icon> Paramètre</button>
           <md-menu #menu="mdMenu">
             <button md-menu-item [routerLink]="['/welcome']" ><md-icon>arrow_back</md-icon> Retour </button>
@@ -35,10 +39,9 @@
               </md-select>
               <md-input-container>
                 <input mdInput
-                       placeholder="Note"
+                       placeholder="Coef"
                        type="number"
                        [(ngModel)]="coef"
-                       (change)="onChange()"
                 >
               </md-input-container>
             </div>
@@ -46,25 +49,26 @@
           </div>
           <div class="toolbar-right">
             <button md-button (click)="addList()">
-              <md-icon>add</md-icon>Ajouter la list</button>
+              <md-icon>add</md-icon>Ajouter la liste</button>
           </div>
 
         </div>
     </md-toolbar>
   </div>
-</div>
+  <div class="table profil ">
 
-<div class="table profil ">
+    <div class="toolbar" *ngFor="let title of compo">
+      <div class="toolbar-left">
+        <div class="space-w" ></div>
+        {{title.markListTitle}}
+      </div>
+      <div class="toolbar-right">
+        {{title.coef}}
+        <div class="space-w"></div>
+      </div>
+    </div>
 
-  <div class="toolbar" *ngFor="let title of listsTitles">
-    <div class="toolbar-left">
-      <div class="space-w"></div>
-      {{title}}
-    </div>
-    <div class="toolbar-right">
-      <button md-button [routerLink]="['/mark', title ]"><md-icon>publish</md-icon>Publier</button>
-      <div class="space-w"></div>
-    </div>
   </div>
 
 </div>
+

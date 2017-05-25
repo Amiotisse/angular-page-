@@ -37,6 +37,8 @@ export class MarksComposeComponent implements OnInit {
         coef : this.coef
       };
     this.compo.push(titleCoef);
+    this.coef=0;
+    this.titleSelected="";
     console.log(this.compo);
   }
 
